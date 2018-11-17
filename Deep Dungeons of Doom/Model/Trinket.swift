@@ -7,10 +7,11 @@
 //
 
 import Foundation
+import UIKit
 
 class Trinket : ItemWithStats{
     
-     init(cst : Int, ilvl : Int) {
+    init(cst : Int, ilvl : Int, image : UIImage) {
         super.init() //I don't want the supers to be able to instanciate (abstract)
         
         atkRatio = Double.random(in: 0.2..<0.35)
@@ -25,6 +26,7 @@ class Trinket : ItemWithStats{
         
         iLvl = ilvl
         cost = cst
+        self.image = image
     }
     
     

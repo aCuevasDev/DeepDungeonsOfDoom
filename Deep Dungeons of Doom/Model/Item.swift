@@ -7,10 +7,12 @@
 //
 
 import Foundation
+import UIKit
 
 class Item{
     var cost : Int!
     var iLvl : Int!
+    var image : UIImage!
     
    /* private init(){
         cost = 0

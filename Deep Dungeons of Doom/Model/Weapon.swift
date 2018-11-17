@@ -12,4 +12,5 @@ class Weapon : ItemWithStats{
     
     var hands : Int!
     
+    
 }
