@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA029DF221A067F70012B62B /* ItemWithStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA029DF121A067F70012B62B /* ItemWithStats.swift */; };
+		FA029DF421A07C320012B62B /* Warrior.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA029DF321A07C320012B62B /* Warrior.swift */; };
+		FA029DF621A07C3E0012B62B /* Mage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA029DF521A07C3E0012B62B /* Mage.swift */; };
+		FA029DF821A07C480012B62B /* Ranger.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA029DF721A07C480012B62B /* Ranger.swift */; };
 		FA02D57F219F6FCC00DA7419 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA02D57E219F6FCC00DA7419 /* AppDelegate.swift */; };
 		FA02D581219F6FCC00DA7419 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA02D580219F6FCC00DA7419 /* ViewController.swift */; };
 		FA02D584219F6FCC00DA7419 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA02D582219F6FCC00DA7419 /* Main.storyboard */; };
@@ -14,6 +18,17 @@
 		FA02D589219F6FCF00DA7419 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA02D587219F6FCF00DA7419 /* LaunchScreen.storyboard */; };
 		FA02D594219F6FCF00DA7419 /* Deep_Dungeons_of_DoomTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA02D593219F6FCF00DA7419 /* Deep_Dungeons_of_DoomTests.swift */; };
 		FA02D59F219F6FCF00DA7419 /* Deep_Dungeons_of_DoomUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA02D59E219F6FCF00DA7419 /* Deep_Dungeons_of_DoomUITests.swift */; };
+		FA02D5AD219F703000DA7419 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA02D5AC219F703000DA7419 /* Item.swift */; };
+		FA02D5B0219F706500DA7419 /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA02D5AF219F706500DA7419 /* Hero.swift */; };
+		FA02D5B2219F707600DA7419 /* Weapon.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA02D5B1219F707600DA7419 /* Weapon.swift */; };
+		FA02D5B4219F707F00DA7419 /* Armor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA02D5B3219F707F00DA7419 /* Armor.swift */; };
+		FA02D5B6219F708A00DA7419 /* Trinket.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA02D5B5219F708A00DA7419 /* Trinket.swift */; };
+		FA02D5B8219F709B00DA7419 /* Helmet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA02D5B7219F709B00DA7419 /* Helmet.swift */; };
+		FA02D5BA219F70BD00DA7419 /* Cuirass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA02D5B9219F70BD00DA7419 /* Cuirass.swift */; };
+		FA02D5BC219F70C700DA7419 /* Boots.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA02D5BB219F70C700DA7419 /* Boots.swift */; };
+		FA02D5BE219F70D100DA7419 /* Consumable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA02D5BD219F70D100DA7419 /* Consumable.swift */; };
+		FA02D5C0219F70E400DA7419 /* OffHand.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA02D5BF219F70E400DA7419 /* OffHand.swift */; };
+		FA02D5C2219F71E100DA7419 /* Inventory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA02D5C1219F71E100DA7419 /* Inventory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +49,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FA029DF121A067F70012B62B /* ItemWithStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemWithStats.swift; sourceTree = "<group>"; };
+		FA029DF321A07C320012B62B /* Warrior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Warrior.swift; sourceTree = "<group>"; };
+		FA029DF521A07C3E0012B62B /* Mage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mage.swift; sourceTree = "<group>"; };
+		FA029DF721A07C480012B62B /* Ranger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ranger.swift; sourceTree = "<group>"; };
 		FA02D57B219F6FCC00DA7419 /* Deep Dungeons of Doom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Deep Dungeons of Doom.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA02D57E219F6FCC00DA7419 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA02D580219F6FCC00DA7419 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +66,17 @@
 		FA02D59A219F6FCF00DA7419 /* Deep Dungeons of DoomUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Deep Dungeons of DoomUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA02D59E219F6FCF00DA7419 /* Deep_Dungeons_of_DoomUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deep_Dungeons_of_DoomUITests.swift; sourceTree = "<group>"; };
 		FA02D5A0219F6FCF00DA7419 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA02D5AC219F703000DA7419 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		FA02D5AF219F706500DA7419 /* Hero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
+		FA02D5B1219F707600DA7419 /* Weapon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weapon.swift; sourceTree = "<group>"; };
+		FA02D5B3219F707F00DA7419 /* Armor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Armor.swift; sourceTree = "<group>"; };
+		FA02D5B5219F708A00DA7419 /* Trinket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trinket.swift; sourceTree = "<group>"; };
+		FA02D5B7219F709B00DA7419 /* Helmet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helmet.swift; sourceTree = "<group>"; };
+		FA02D5B9219F70BD00DA7419 /* Cuirass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cuirass.swift; sourceTree = "<group>"; };
+		FA02D5BB219F70C700DA7419 /* Boots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Boots.swift; sourceTree = "<group>"; };
+		FA02D5BD219F70D100DA7419 /* Consumable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Consumable.swift; sourceTree = "<group>"; };
+		FA02D5BF219F70E400DA7419 /* OffHand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffHand.swift; sourceTree = "<group>"; };
+		FA02D5C1219F71E100DA7419 /* Inventory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inventory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +127,7 @@
 		FA02D57D219F6FCC00DA7419 /* Deep Dungeons of Doom */ = {
 			isa = PBXGroup;
 			children = (
+				FA02D5AE219F703A00DA7419 /* Model */,
 				FA02D57E219F6FCC00DA7419 /* AppDelegate.swift */,
 				FA02D580219F6FCC00DA7419 /* ViewController.swift */,
 				FA02D582219F6FCC00DA7419 /* Main.storyboard */,
@@ -123,6 +154,28 @@
 				FA02D5A0219F6FCF00DA7419 /* Info.plist */,
 			);
 			path = "Deep Dungeons of DoomUITests";
+			sourceTree = "<group>";
+		};
+		FA02D5AE219F703A00DA7419 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FA02D5AC219F703000DA7419 /* Item.swift */,
+				FA02D5AF219F706500DA7419 /* Hero.swift */,
+				FA02D5B1219F707600DA7419 /* Weapon.swift */,
+				FA02D5B3219F707F00DA7419 /* Armor.swift */,
+				FA02D5B5219F708A00DA7419 /* Trinket.swift */,
+				FA02D5B7219F709B00DA7419 /* Helmet.swift */,
+				FA02D5B9219F70BD00DA7419 /* Cuirass.swift */,
+				FA02D5BB219F70C700DA7419 /* Boots.swift */,
+				FA02D5BD219F70D100DA7419 /* Consumable.swift */,
+				FA02D5BF219F70E400DA7419 /* OffHand.swift */,
+				FA02D5C1219F71E100DA7419 /* Inventory.swift */,
+				FA029DF121A067F70012B62B /* ItemWithStats.swift */,
+				FA029DF321A07C320012B62B /* Warrior.swift */,
+				FA029DF521A07C3E0012B62B /* Mage.swift */,
+				FA029DF721A07C480012B62B /* Ranger.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,8 +309,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA02D5B2219F707600DA7419 /* Weapon.swift in Sources */,
+				FA02D5B6219F708A00DA7419 /* Trinket.swift in Sources */,
 				FA02D581219F6FCC00DA7419 /* ViewController.swift in Sources */,
+				FA029DF821A07C480012B62B /* Ranger.swift in Sources */,
+				FA02D5C2219F71E100DA7419 /* Inventory.swift in Sources */,
+				FA02D5BE219F70D100DA7419 /* Consumable.swift in Sources */,
+				FA02D5BC219F70C700DA7419 /* Boots.swift in Sources */,
+				FA029DF421A07C320012B62B /* Warrior.swift in Sources */,
+				FA02D5AD219F703000DA7419 /* Item.swift in Sources */,
+				FA02D5BA219F70BD00DA7419 /* Cuirass.swift in Sources */,
+				FA02D5B4219F707F00DA7419 /* Armor.swift in Sources */,
 				FA02D57F219F6FCC00DA7419 /* AppDelegate.swift in Sources */,
+				FA029DF221A067F70012B62B /* ItemWithStats.swift in Sources */,
+				FA02D5B8219F709B00DA7419 /* Helmet.swift in Sources */,
+				FA02D5C0219F70E400DA7419 /* OffHand.swift in Sources */,
+				FA02D5B0219F706500DA7419 /* Hero.swift in Sources */,
+				FA029DF621A07C3E0012B62B /* Mage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
