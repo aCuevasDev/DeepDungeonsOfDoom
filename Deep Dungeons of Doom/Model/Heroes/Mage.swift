@@ -1,5 +1,5 @@
 //
-//  Ranger.swift
+//  Mage.swift
 //  Deep Dungeons of Doom
 //
 //  Created by alex on 17/11/2018.
@@ -8,13 +8,19 @@
 
 import Foundation
 
-class Ranger : Hero{
-    
+class Mage : Hero{
+ 
     override init() {
         super.init()
         
-        name = "Ranger"
+        name = "Mage"
         inventory = Inventory()
-        health = 3
+        maxHealth = 2
+        health = maxHealth
+        
+        atkRatio = 0.2
+        defRatio = 0.2
+        magRatio = 0.9
+        lckRatio = 0.4
     }
 }

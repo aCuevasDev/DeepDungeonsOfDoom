@@ -9,5 +9,9 @@
 import Foundation
 
 class Consumable : Item{
+    var effect : Effect = Effect()
     
+    init(effect : Effect){
+        self.effect = effect
+    }
 }

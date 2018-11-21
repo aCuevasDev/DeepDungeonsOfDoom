@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F98E67C21A5E09600C7448A /* Effect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F98E67B21A5E09600C7448A /* Effect.swift */; };
 		FA029DF221A067F70012B62B /* ItemWithStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA029DF121A067F70012B62B /* ItemWithStats.swift */; };
 		FA029DF421A07C320012B62B /* Warrior.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA029DF321A07C320012B62B /* Warrior.swift */; };
 		FA029DF621A07C3E0012B62B /* Mage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA029DF521A07C3E0012B62B /* Mage.swift */; };
@@ -53,6 +54,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7F98E67B21A5E09600C7448A /* Effect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Effect.swift; sourceTree = "<group>"; };
 		FA029DF121A067F70012B62B /* ItemWithStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemWithStats.swift; sourceTree = "<group>"; };
 		FA029DF321A07C320012B62B /* Warrior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Warrior.swift; sourceTree = "<group>"; };
 		FA029DF521A07C3E0012B62B /* Mage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mage.swift; sourceTree = "<group>"; };
@@ -112,6 +114,61 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7F98E67621A5DE7D00C7448A /* Items */ = {
+			isa = PBXGroup;
+			children = (
+				FA02D5AC219F703000DA7419 /* Item.swift */,
+				FA029DF121A067F70012B62B /* ItemWithStats.swift */,
+				7F98E67721A5DF0500C7448A /* Armors */,
+				7F98E67821A5DFB600C7448A /* Weapon */,
+				7F98E67921A5DFDD00C7448A /* Others */,
+			);
+			path = Items;
+			sourceTree = "<group>";
+		};
+		7F98E67721A5DF0500C7448A /* Armors */ = {
+			isa = PBXGroup;
+			children = (
+				FA02D5B3219F707F00DA7419 /* Armor.swift */,
+				FA02D5B7219F709B00DA7419 /* Helmet.swift */,
+				FA02D5B9219F70BD00DA7419 /* Cuirass.swift */,
+				FA02D5BB219F70C700DA7419 /* Boots.swift */,
+			);
+			path = Armors;
+			sourceTree = "<group>";
+		};
+		7F98E67821A5DFB600C7448A /* Weapon */ = {
+			isa = PBXGroup;
+			children = (
+				FA02D5B1219F707600DA7419 /* Weapon.swift */,
+				FA029DFD21A088400012B62B /* Sword.swift */,
+				FA029DFF21A089A80012B62B /* Bow.swift */,
+				FA029E0121A08A110012B62B /* Staff.swift */,
+			);
+			path = Weapon;
+			sourceTree = "<group>";
+		};
+		7F98E67921A5DFDD00C7448A /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				FA02D5B5219F708A00DA7419 /* Trinket.swift */,
+				FA02D5BD219F70D100DA7419 /* Consumable.swift */,
+				FA02D5BF219F70E400DA7419 /* OffHand.swift */,
+			);
+			path = Others;
+			sourceTree = "<group>";
+		};
+		7F98E67A21A5E00700C7448A /* Heroes */ = {
+			isa = PBXGroup;
+			children = (
+				FA02D5AF219F706500DA7419 /* Hero.swift */,
+				FA029DF321A07C320012B62B /* Warrior.swift */,
+				FA029DF521A07C3E0012B62B /* Mage.swift */,
+				FA029DF721A07C480012B62B /* Ranger.swift */,
+			);
+			path = Heroes;
+			sourceTree = "<group>";
+		};
 		FA02D572219F6FCC00DA7419 = {
 			isa = PBXGroup;
 			children = (
@@ -168,24 +225,10 @@
 		FA02D5AE219F703A00DA7419 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				FA02D5AC219F703000DA7419 /* Item.swift */,
-				FA02D5AF219F706500DA7419 /* Hero.swift */,
-				FA02D5B1219F707600DA7419 /* Weapon.swift */,
-				FA02D5B3219F707F00DA7419 /* Armor.swift */,
-				FA02D5B5219F708A00DA7419 /* Trinket.swift */,
-				FA02D5B7219F709B00DA7419 /* Helmet.swift */,
-				FA02D5B9219F70BD00DA7419 /* Cuirass.swift */,
-				FA02D5BB219F70C700DA7419 /* Boots.swift */,
-				FA02D5BD219F70D100DA7419 /* Consumable.swift */,
-				FA02D5BF219F70E400DA7419 /* OffHand.swift */,
+				7F98E67A21A5E00700C7448A /* Heroes */,
+				7F98E67621A5DE7D00C7448A /* Items */,
 				FA02D5C1219F71E100DA7419 /* Inventory.swift */,
-				FA029DF121A067F70012B62B /* ItemWithStats.swift */,
-				FA029DF321A07C320012B62B /* Warrior.swift */,
-				FA029DF521A07C3E0012B62B /* Mage.swift */,
-				FA029DF721A07C480012B62B /* Ranger.swift */,
-				FA029DFD21A088400012B62B /* Sword.swift */,
-				FA029DFF21A089A80012B62B /* Bow.swift */,
-				FA029E0121A08A110012B62B /* Staff.swift */,
+				7F98E67B21A5E09600C7448A /* Effect.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -331,6 +374,7 @@
 				FA02D5C2219F71E100DA7419 /* Inventory.swift in Sources */,
 				FA02D5BE219F70D100DA7419 /* Consumable.swift in Sources */,
 				FA02D5BC219F70C700DA7419 /* Boots.swift in Sources */,
+				7F98E67C21A5E09600C7448A /* Effect.swift in Sources */,
 				FA029DF421A07C320012B62B /* Warrior.swift in Sources */,
 				FA02D5AD219F703000DA7419 /* Item.swift in Sources */,
 				FA029E0221A08A110012B62B /* Staff.swift in Sources */,

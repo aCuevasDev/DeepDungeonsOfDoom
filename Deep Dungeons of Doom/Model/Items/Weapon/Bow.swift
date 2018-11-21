@@ -10,8 +10,9 @@ import Foundation
 import UIKit
 
 class Bow : Weapon{
-    init(cst : Int, ilvl : Int, image : UIImage, hands : Int) {
+    init(cst : Int, ilvl : Int, image : UIImage) {
         super.init() //I don't want the supers to be able to instanciate (abstract)
+        hands = 2
         
         atkRatio = Double.random(in: 0.4..<0.7)
         defRatio = Double.random(in: 0.2..<0.25)
