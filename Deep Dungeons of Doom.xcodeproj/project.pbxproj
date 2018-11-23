@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F6D97A721A87A9E00216E66 /* Notes in Resources */ = {isa = PBXBuildFile; fileRef = 7F6D97A621A87A9E00216E66 /* Notes */; };
 		7F98E67C21A5E09600C7448A /* Effect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F98E67B21A5E09600C7448A /* Effect.swift */; };
 		FA029DF221A067F70012B62B /* ItemWithStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA029DF121A067F70012B62B /* ItemWithStats.swift */; };
 		FA029DF421A07C320012B62B /* Warrior.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA029DF321A07C320012B62B /* Warrior.swift */; };
@@ -54,6 +55,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7F6D97A621A87A9E00216E66 /* Notes */ = {isa = PBXFileReference; lastKnownFileType = text; path = Notes; sourceTree = "<group>"; };
 		7F98E67B21A5E09600C7448A /* Effect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Effect.swift; sourceTree = "<group>"; };
 		FA029DF121A067F70012B62B /* ItemWithStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemWithStats.swift; sourceTree = "<group>"; };
 		FA029DF321A07C320012B62B /* Warrior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Warrior.swift; sourceTree = "<group>"; };
@@ -200,6 +202,7 @@
 				FA02D585219F6FCF00DA7419 /* Assets.xcassets */,
 				FA02D587219F6FCF00DA7419 /* LaunchScreen.storyboard */,
 				FA02D58A219F6FCF00DA7419 /* Info.plist */,
+				7F6D97A621A87A9E00216E66 /* Notes */,
 			);
 			path = "Deep Dungeons of Doom";
 			sourceTree = "<group>";
@@ -339,6 +342,7 @@
 			files = (
 				FA02D589219F6FCF00DA7419 /* LaunchScreen.storyboard in Resources */,
 				FA02D586219F6FCF00DA7419 /* Assets.xcassets in Resources */,
+				7F6D97A721A87A9E00216E66 /* Notes in Resources */,
 				FA02D584219F6FCC00DA7419 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

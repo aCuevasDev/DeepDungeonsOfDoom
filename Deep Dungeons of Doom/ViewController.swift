@@ -15,12 +15,22 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         //TODO USE JSON OR CSV TO SAVE INITIAL SETUP
         
-        //var hero : Hero = Warrior()
+        do {
+            guard var hero : Hero =  try Hero() else { return }
+        } catch {
+            print("ok")
+        }
+        
+        
+        
+        
+        
         var staff = Staff(cst: 100,ilvl: 30,image: UIImage(named: "sword1")!)
         print(staff.atk)
         print(staff.def)
         print(staff.mag)
         print(staff.lck)
+        
     }
 
 

@@ -9,7 +9,10 @@
 import Foundation
 
 class Effect {
-    var healTag : String = "heal"
+    enum tags : String{
+        case heal
+    }
+    
     
     var bonus : Int = 0
     var type : String = ""
@@ -17,20 +20,19 @@ class Effect {
     init(){
     }
     
-    init(effect : String){
-        switch effect {
-        case healTag:
+    init(type : String){
+        switch type {
+        case tags.heal.rawValue:
             bonus = 30
-            type = healTag
+            self.type = tags.heal.rawValue
             break
         default: break
-            
         }
     }
     
     func use(hero : Hero){
         switch type {
-        case healTag:
+        case tags.heal.rawValue:
             hero.health = hero.health+bonus
             if (hero.health > hero.maxHealth){
             hero.health = hero.maxHealth
@@ -38,5 +40,4 @@ class Effect {
         default: break
         }
     }
-
 }
