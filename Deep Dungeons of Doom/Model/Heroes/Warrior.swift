@@ -9,7 +9,7 @@
 import Foundation
 
 class Warrior : Hero {
-    
+    /*
      override init() {
         super.init()
         
@@ -22,5 +22,5 @@ class Warrior : Hero {
         defRatio = 0.5
         magRatio = 0.2
         lckRatio = 0.3
-    }
+    }*/
 }

@@ -24,7 +24,7 @@ class Inventory {
         self.boots = boots
         self.trinket = trinket
     }
-    
+    /*
     func add(item : Item){
         switch type(of: item) {
         case Weapon:
@@ -35,5 +35,5 @@ class Inventory {
         default:
             <#code#>
         }
-    }
+    }*/
 }

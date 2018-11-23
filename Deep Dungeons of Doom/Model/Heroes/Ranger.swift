@@ -9,7 +9,7 @@
 import Foundation
 
 class Ranger : Hero{
-    
+    /*
     override init() {
         super.init()
         
@@ -22,5 +22,5 @@ class Ranger : Hero{
         defRatio = 0.4
         magRatio = 0.3
         lckRatio = 0.6
-    }
+    }*/
 }

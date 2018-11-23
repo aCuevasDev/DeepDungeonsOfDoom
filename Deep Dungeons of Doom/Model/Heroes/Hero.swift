@@ -8,6 +8,12 @@
 
 import Foundation
 
+enum MyError: Error {
+    case runtimeError(String)
+    case numberError(String)
+}
+
+
 class Hero {
     var maxHealth : Int!
     let minHealth : Int = 0
@@ -22,4 +28,21 @@ class Hero {
     var defRatio : Double!
     var magRatio : Double!
     var lckRatio : Double!
+    
+    init() throws {
+ 
+   
+    do {
+        try someFunction()
+    } catch MyError.runtimeError(let errorMessage) {
+        print(errorMessage)
+    }
+            
+    }
+    
+    func someFunction() throws {
+        throw MyError.runtimeError("some message")
+    }
+    
+    
 }
