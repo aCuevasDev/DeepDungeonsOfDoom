@@ -3,7 +3,7 @@
 //  Deep Dungeons of Doom
 //
 //  Created by alex on 17/11/2018.
-//  Copyright Â© 2018 Alex. All rights reserved.
+//  Copyright © 2018 Alex. All rights reserved.
 //
 
 import Foundation
@@ -32,4 +32,29 @@ class ItemWithStats : Item {
         magRatio = 0.0
         lckRatio = 0.0
     } */
+    
+    func printStats(){
+        print(String(describing: self))
+        print("ATK: \(atk)")
+        print("DEF: \(def)")
+        print("MAG: \(mag)")
+        print("LCK: \(lck)")
+    }
+    
+    func round(){
+        atk = atk*100
+        def = def*100
+        mag = mag*100
+        lck = lck*100
+        
+        atk.round()
+        def.round()
+        mag.round()
+        lck.round()
+        
+        atk = atk/100
+        def = def/100
+        mag = mag/100
+        lck = lck/100
+    }
 }
