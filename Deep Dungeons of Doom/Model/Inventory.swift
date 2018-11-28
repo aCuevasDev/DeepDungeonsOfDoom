@@ -17,6 +17,11 @@ class Inventory {
     var trinket : Trinket!
     var consumable : Consumable?
     
+    var trinketProperty: Trinket {
+        set { trinket = newValue }
+        get { return trinket}
+    }
+    
     init(){
         
     }

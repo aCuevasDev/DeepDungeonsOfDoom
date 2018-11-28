@@ -10,9 +10,9 @@ import Foundation
 import UIKit
 
 class Item{
-    var cost : Int!
-    var iLvl : Int!
-    var image : UIImage!
+    var cost : Int = 0
+    var iLvl : Int = 0
+    var image : UIImage = UIImage()
     
    /* private init(){
         cost = 0

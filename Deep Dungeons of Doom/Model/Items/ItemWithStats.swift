@@ -9,15 +9,15 @@
 import Foundation
 
 class ItemWithStats : Item {
-    var atk : Double!
-    var def : Double!
-    var mag : Double!
-    var lck : Double!
+    var atk : Double = 0
+    var def : Double = 0
+    var mag : Double = 0
+    var lck : Double = 0
     
-    var atkRatio : Double!
-    var defRatio : Double!
-    var magRatio : Double!
-    var lckRatio : Double!
+    var atkRatio : Double = 0
+    var defRatio : Double = 0
+    var magRatio : Double = 0
+    var lckRatio : Double = 0
     
     /*private override init() {
         cost = 0
@@ -36,7 +36,7 @@ class ItemWithStats : Item {
     func printStats(){
         round()
         print(String(describing: self))
-        print("ATK: \(String(describing: atk))")
+        print("ATK: \(atk)")
         print("DEF: \(def)")
         print("MAG: \(mag)")
         print("LCK: \(lck)")
@@ -57,5 +57,10 @@ class ItemWithStats : Item {
         def = def/100
         mag = mag/100
         lck = lck/100
+    }
+    
+    func getPower() -> [String:Double]{
+        let pwrDic : [String:Double] = ["ATK":atk,"DEF":def,"MAG":mag,"LCK":lck]
+        return pwrDic
     }
 }

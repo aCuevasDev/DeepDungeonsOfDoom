@@ -35,6 +35,7 @@ class ViewController: UIViewController {
         } */
         
         let warrior : Warrior = Warrior()
+        print(warrior.name)
         warrior.inventory.weapon.printStats()
         warrior.inventory.helmet.printStats()
         warrior.inventory.cuirass.printStats()

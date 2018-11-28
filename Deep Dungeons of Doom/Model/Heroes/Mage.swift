@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 private var initWeapon : Staff = Staff(cst: 0, ilvl: initItemLevel, image: UIImage(named: "scepter3")!)
-private var initHelmet : Helmet = Helmet(cst: 0, ilvl: initItemLevel, image: UIImage(named: "helmet3")!)
+private var initHelmet : Helmet = Helmet(cst: 0, ilvl: initItemLevel, image: UIImage(named: "helmet3")!, magic: true)
 private var initCuirass : Cuirass = Cuirass(cst: 0, ilvl: initItemLevel, image: UIImage(named: "armour3")!)
 private var initBoots : Boots = Boots(cst: 0, ilvl: initItemLevel, image: UIImage(named: "boots")!)
 private var initTrinket : Trinket = Trinket(cst: 0, ilvl: initItemLevel, image: UIImage(named: "necklace")!)

@@ -13,13 +13,21 @@ enum MyError: Error {
     case numberError(String)
 }
 
+extension Dictionary {
+    mutating func merge(dict: [Key: Value]){
+        for (k, v) in dict {
+            updateValue(v+(self[k]), forKey: k)
+        }
+    }
+}
+
 internal let initItemLevel : Int = 30
 
 class Hero {
     var maxHealth : Int!
     let minHealth : Int = 0
     
-    var name : String!
+    var name : String = ""
     var exp : Int = 0
     var gold : Int = 100
     var inventory : Inventory = Inventory()
@@ -46,5 +54,10 @@ class Hero {
         throw MyError.runtimeError("some message")
     } */
     
+    func getPower(){
+        var pwrDic : [String:Double] = ["":0.0]
+        pwrDic.merge(dict: inventory.weapon.getPower())
+        
+    }
     
 }

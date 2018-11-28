@@ -12,8 +12,8 @@ import UIKit
 class Warrior : Hero {
     
     private var initWeapon : Sword = Sword(cst: 0, ilvl: initItemLevel, image: UIImage(named: "sword4")!, hands: 1)
-    private var initHelmet : Helmet = Helmet(cst: 0, ilvl: initItemLevel, image: UIImage(named: "helmet5")!)
-    private var initCuirass : Cuirass = Cuirass(cst: 0,ilvl: initItemLevel, image: UIImage(named: "armor5")!)
+    private var initHelmet : Helmet = Helmet(cst: 0, ilvl: initItemLevel, image: UIImage(named: "helmet5")!, magic: false)
+    private var initCuirass : Cuirass = Cuirass(cst: 0,ilvl: initItemLevel, image: UIImage(named: "armour3")!)
     private var initBoots : Boots = Boots(cst: 0,ilvl: initItemLevel, image: UIImage(named: "boots")!)
     private var initTrinket : Trinket = Trinket(cst: 0,ilvl: initItemLevel, image: UIImage(named: "ring")!)
     
