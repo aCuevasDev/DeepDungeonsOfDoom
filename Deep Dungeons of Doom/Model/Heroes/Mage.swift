@@ -8,8 +8,15 @@
 
 import Foundation
 
+private var initWeapon : Staff = Staff()
+private var initHelmet : Helmet = Helmet()
+private var initCuirass : Cuirass = Cuirass()
+private var initBoots : Boots = Boots()
+private var initTrinket : Trinket = Trinket()
+private var initConsumable : Consumable = Consumable
+
 class Mage : Hero{
- /*
+ 
     override init() {
         super.init()
         
@@ -22,5 +29,5 @@ class Mage : Hero{
         defRatio = 0.2
         magRatio = 0.9
         lckRatio = 0.4
-    }*/
+    }
 }

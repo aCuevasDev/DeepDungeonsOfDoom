@@ -8,8 +8,14 @@
 
 import Foundation
 
+private var initWeapon : Bow = Bow(cst: Int, ilvl: <#Int#>, image: <#UIImage#>)
+private var initHelmet : Helmet = Helmet()
+private var initCuirass : Cuirass = Cuirass()
+private var initBoots : Boots = Boots()
+private var initTrinket : Trinket = Trinket()
+
 class Ranger : Hero{
-    /*
+
     override init() {
         super.init()
         
@@ -22,5 +28,5 @@ class Ranger : Hero{
         defRatio = 0.4
         magRatio = 0.3
         lckRatio = 0.6
-    }*/
+    }
 }

@@ -14,4 +14,8 @@ class Consumable : Item{
     init(effect : Effect){
         self.effect = effect
     }
+    
+    func use(hero : Hero){
+        effect.use(hero: hero)
+    }
 }

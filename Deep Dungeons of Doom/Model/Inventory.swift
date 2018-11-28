@@ -17,12 +17,18 @@ class Inventory {
     var trinket : Trinket!
     var consumable : Consumable?
     
+    init(){
+        
+    }
+    
     init(weapon : Weapon, helmet : Helmet, cuirass : Cuirass, boots : Boots, trinket: Trinket){
         self.weapon = weapon
         self.helmet = helmet
         self.cuirass = cuirass
         self.boots = boots
         self.trinket = trinket
+        self.consumable = nil
+        self.offHand = nil
     }
     /*
     func add(item : Item){

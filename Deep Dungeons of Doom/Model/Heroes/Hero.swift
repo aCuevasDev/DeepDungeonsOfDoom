@@ -21,14 +21,15 @@ class Hero {
     var name : String!
     var exp : Int = 0
     var gold : Int = 100
-    var inventory : Inventory!
-    var health : Int! // Or float?
+    var inventory : Inventory = Inventory()
+    var health : Int = 0
     
-    var atkRatio : Double!
-    var defRatio : Double!
-    var magRatio : Double!
-    var lckRatio : Double!
+    var atkRatio : Double = 0
+    var defRatio : Double = 0
+    var magRatio : Double = 0
+    var lckRatio : Double = 0
     
+    /*
     init() throws {
  
    
@@ -42,7 +43,7 @@ class Hero {
     
     func someFunction() throws {
         throw MyError.runtimeError("some message")
-    }
+    } */
     
     
 }

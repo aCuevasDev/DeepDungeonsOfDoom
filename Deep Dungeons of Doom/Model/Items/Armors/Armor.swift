@@ -10,4 +10,6 @@ import Foundation
 
 class Armor : ItemWithStats{
     
+    var armor : Double = 0.0
+    
 }

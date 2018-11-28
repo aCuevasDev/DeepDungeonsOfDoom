@@ -3,7 +3,7 @@
 //  Deep Dungeons of Doom
 //
 //  Created by alex on 17/11/2018.
-//  Copyright © 2018 Alex. All rights reserved.
+//  Copyright 2018 Alex. All rights reserved.
 //
 
 import Foundation
@@ -35,7 +35,7 @@ class ItemWithStats : Item {
     
     func printStats(){
         print(String(describing: self))
-        print("ATK: \(atk)")
+        print("ATK: \(String(describing: atk))")
         print("DEF: \(def)")
         print("MAG: \(mag)")
         print("LCK: \(lck)")
