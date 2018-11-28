@@ -7,13 +7,14 @@
 //
 
 import Foundation
+import UIKit
 
-private var initWeapon : Staff = Staff()
-private var initHelmet : Helmet = Helmet()
-private var initCuirass : Cuirass = Cuirass()
-private var initBoots : Boots = Boots()
-private var initTrinket : Trinket = Trinket()
-private var initConsumable : Consumable = Consumable
+private var initWeapon : Staff = Staff(cst: 0, ilvl: initItemLevel, image: UIImage(named: "scepter3")!)
+private var initHelmet : Helmet = Helmet(cst: 0, ilvl: initItemLevel, image: UIImage(named: "helmet3")!)
+private var initCuirass : Cuirass = Cuirass(cst: 0, ilvl: initItemLevel, image: UIImage(named: "armour3")!)
+private var initBoots : Boots = Boots(cst: 0, ilvl: initItemLevel, image: UIImage(named: "boots")!)
+private var initTrinket : Trinket = Trinket(cst: 0, ilvl: initItemLevel, image: UIImage(named: "necklace")!)
+private var initConsumable : Consumable = Consumable(effect: Effect(type: "heal"))
 
 class Mage : Hero{
  

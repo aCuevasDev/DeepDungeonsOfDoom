@@ -8,7 +8,6 @@
 
 import Foundation
 import UIKit
-private let initItemLevel : Int = 30
 
 class Warrior : Hero {
     
@@ -23,7 +22,7 @@ class Warrior : Hero {
         super.init()
         
         name = "Warrior"
-        inventory = Inventory() //TODO insert initial items into inventory
+        inventory = Inventory(weapon: initWeapon, helmet: initHelmet, cuirass: initCuirass, boots: initBoots, trinket: initTrinket) //TODO insert initial items into inventory
         maxHealth = 4
         health = maxHealth
         

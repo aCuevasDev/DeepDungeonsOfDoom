@@ -13,6 +13,7 @@ enum MyError: Error {
     case numberError(String)
 }
 
+internal let initItemLevel : Int = 30
 
 class Hero {
     var maxHealth : Int!

@@ -15,6 +15,7 @@ class ViewController: UIViewController {
         let sword = Sword(cst: 100, ilvl: 30, image: UIImage(named: "sword4")!, hands: 1)
         let staff = Staff(cst: 100, ilvl: 30, image: UIImage(named: "scepter3")!)
         let bow = Bow(cst: 100, ilvl: 30, image: UIImage(named: "arrow")!)
+        /*
         sword.round()
         sword.printStats()
         
@@ -23,6 +24,7 @@ class ViewController: UIViewController {
         
         bow.round()
         bow.printStats()
+    */
         // Do any additional setup after loading the view, typically from a nib.
         //TODO USE JSON OR CSV TO SAVE INITIAL SETUP
         /*
@@ -31,6 +33,12 @@ class ViewController: UIViewController {
         } catch {
             print("ok")
         } */
+        
+        let warrior : Warrior = Warrior()
+        warrior.inventory.weapon.printStats()
+        warrior.inventory.helmet.printStats()
+        warrior.inventory.cuirass.printStats()
+        warrior.inventory.boots.printStats()
         
     }
 

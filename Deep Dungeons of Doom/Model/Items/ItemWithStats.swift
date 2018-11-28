@@ -34,6 +34,7 @@ class ItemWithStats : Item {
     } */
     
     func printStats(){
+        round()
         print(String(describing: self))
         print("ATK: \(String(describing: atk))")
         print("DEF: \(def)")

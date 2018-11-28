@@ -7,12 +7,13 @@
 //
 
 import Foundation
+import UIKit
 
-private var initWeapon : Bow = Bow(cst: Int, ilvl: <#Int#>, image: <#UIImage#>)
-private var initHelmet : Helmet = Helmet()
-private var initCuirass : Cuirass = Cuirass()
-private var initBoots : Boots = Boots()
-private var initTrinket : Trinket = Trinket()
+private var initWeapon : Bow = Bow(cst: 0, ilvl: initItemLevel, image: UIImage(named: "arrow")!)
+private var initHelmet : Helmet = Helmet(cst: 0, ilvl: initItemLevel, image: UIImage(named: "cap")!)
+private var initCuirass : Cuirass = Cuirass(cst: 0, ilvl: initItemLevel, image: UIImage(named: "armour3")!)
+private var initBoots : Boots = Boots(cst: 0, ilvl: initItemLevel, image: UIImage(named: "boots")!)
+private var initTrinket : Trinket = Trinket(cst: 0, ilvl: initItemLevel, image: UIImage(named: "ring")!)
 
 class Ranger : Hero{
 
