@@ -66,12 +66,11 @@ class Hero {
         let sumAmountByComany = offerings.reduce(into: [:]) { (result, offer)  in
             result[offer.company] = (result[offer.company] ?? 0 ) + offer.amount
         } */
- /*
+ 
         pwrDic.map { (arg) -> [String:Double] in
-            
             let (key, value) = arg
             return pwrDic[key] = pwrDic[key]  + inventory.weapon.getPower()[key] ?? 0
             }
     }
-    */
+ 
 }
