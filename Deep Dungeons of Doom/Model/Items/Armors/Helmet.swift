@@ -15,7 +15,7 @@ class Helmet : Armor{
     init(cst : Int, ilvl : Int, image : UIImage, magic : Bool) {
         super.init() //I don't want the supers to be able to instanciate (abstract)
         
-        self.armor = Double(ilvl)*0.3
+        //self.armor = Double(ilvl)*0.3
         
         atkRatio = 0
         defRatio = Double.random(in: 0.2..<0.4)

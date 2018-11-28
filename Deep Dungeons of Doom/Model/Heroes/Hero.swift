@@ -14,9 +14,9 @@ enum MyError: Error {
 }
 
 extension Dictionary {
-    mutating func merge(dict: [Key: Value]){
+    mutating func merge(dict: [Key: Double]){
         for (k, v) in dict {
-            updateValue(v+(self[k]), forKey: k)
+            updateValue(dict[k]+self[k], forKey: k)
         }
     }
 }
@@ -57,7 +57,21 @@ class Hero {
     func getPower(){
         var pwrDic : [String:Double] = ["":0.0]
         pwrDic.merge(dict: inventory.weapon.getPower())
-        
+        /*
+       pwrDic.mapValues { (value) -> Double in
+            return (value ?? 0) + inventory.weapon.getPower()[key]
+        }
+         */
+        /*
+        let sumAmountByComany = offerings.reduce(into: [:]) { (result, offer)  in
+            result[offer.company] = (result[offer.company] ?? 0 ) + offer.amount
+        } */
+ /*
+        pwrDic.map { (arg) -> [String:Double] in
+            
+            let (key, value) = arg
+            return pwrDic[key] = pwrDic[key]  + inventory.weapon.getPower()[key] ?? 0
+            }
     }
-    
+    */
 }
