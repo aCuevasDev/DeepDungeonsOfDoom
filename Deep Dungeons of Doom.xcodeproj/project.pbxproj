@@ -36,6 +36,8 @@
 		FA02D5BE219F70D100DA7419 /* Consumable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA02D5BD219F70D100DA7419 /* Consumable.swift */; };
 		FA02D5C0219F70E400DA7419 /* OffHand.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA02D5BF219F70E400DA7419 /* OffHand.swift */; };
 		FA02D5C2219F71E100DA7419 /* Inventory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA02D5C1219F71E100DA7419 /* Inventory.swift */; };
+		FADBDEFE21AF3EB9005CD2B2 /* Deep Dungeons of Doom.png in Resources */ = {isa = PBXBuildFile; fileRef = FADBDEFC21AF3EB9005CD2B2 /* Deep Dungeons of Doom.png */; };
+		FADBDEFF21AF3EB9005CD2B2 /* Deep Dungeon of Doom.mdj in Resources */ = {isa = PBXBuildFile; fileRef = FADBDEFD21AF3EB9005CD2B2 /* Deep Dungeon of Doom.mdj */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +93,8 @@
 		FA02D5BD219F70D100DA7419 /* Consumable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Consumable.swift; sourceTree = "<group>"; };
 		FA02D5BF219F70E400DA7419 /* OffHand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffHand.swift; sourceTree = "<group>"; };
 		FA02D5C1219F71E100DA7419 /* Inventory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inventory.swift; sourceTree = "<group>"; };
+		FADBDEFC21AF3EB9005CD2B2 /* Deep Dungeons of Doom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Deep Dungeons of Doom.png"; sourceTree = "<group>"; };
+		FADBDEFD21AF3EB9005CD2B2 /* Deep Dungeon of Doom.mdj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Deep Dungeon of Doom.mdj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				FA02D57D219F6FCC00DA7419 /* Deep Dungeons of Doom */,
+				FADBDEF721AF3E0F005CD2B2 /* Information */,
 				FA02D592219F6FCF00DA7419 /* Deep Dungeons of DoomTests */,
 				FA02D59D219F6FCF00DA7419 /* Deep Dungeons of DoomUITests */,
 				FA02D57C219F6FCC00DA7419 /* Products */,
@@ -204,7 +209,6 @@
 				FA02D585219F6FCF00DA7419 /* Assets.xcassets */,
 				FA02D587219F6FCF00DA7419 /* LaunchScreen.storyboard */,
 				FA02D58A219F6FCF00DA7419 /* Info.plist */,
-				7F6D97A621A87A9E00216E66 /* Notes */,
 			);
 			path = "Deep Dungeons of Doom";
 			sourceTree = "<group>";
@@ -237,6 +241,16 @@
 				7F187F7321AF16870009873F /* Shop.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		FADBDEF721AF3E0F005CD2B2 /* Information */ = {
+			isa = PBXGroup;
+			children = (
+				FADBDEFD21AF3EB9005CD2B2 /* Deep Dungeon of Doom.mdj */,
+				FADBDEFC21AF3EB9005CD2B2 /* Deep Dungeons of Doom.png */,
+				7F6D97A621A87A9E00216E66 /* Notes */,
+			);
+			path = Information;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -343,10 +357,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FADBDEFE21AF3EB9005CD2B2 /* Deep Dungeons of Doom.png in Resources */,
 				FA02D589219F6FCF00DA7419 /* LaunchScreen.storyboard in Resources */,
 				FA02D586219F6FCF00DA7419 /* Assets.xcassets in Resources */,
 				7F6D97A721A87A9E00216E66 /* Notes in Resources */,
 				FA02D584219F6FCC00DA7419 /* Main.storyboard in Resources */,
+				FADBDEFF21AF3EB9005CD2B2 /* Deep Dungeon of Doom.mdj in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
