@@ -10,6 +10,7 @@
 		7F187F7421AF16880009873F /* Shop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F187F7321AF16870009873F /* Shop.swift */; };
 		7F6D97A721A87A9E00216E66 /* Notes in Resources */ = {isa = PBXBuildFile; fileRef = 7F6D97A621A87A9E00216E66 /* Notes */; };
 		7F98E67C21A5E09600C7448A /* Effect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F98E67B21A5E09600C7448A /* Effect.swift */; };
+		7FB3922821B1B210008BC726 /* Dice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB3922721B1B210008BC726 /* Dice.swift */; };
 		FA029DF221A067F70012B62B /* ItemWithStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA029DF121A067F70012B62B /* ItemWithStats.swift */; };
 		FA029DF421A07C320012B62B /* Warrior.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA029DF321A07C320012B62B /* Warrior.swift */; };
 		FA029DF621A07C3E0012B62B /* Mage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA029DF521A07C3E0012B62B /* Mage.swift */; };
@@ -61,6 +62,7 @@
 		7F187F7321AF16870009873F /* Shop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shop.swift; sourceTree = "<group>"; };
 		7F6D97A621A87A9E00216E66 /* Notes */ = {isa = PBXFileReference; lastKnownFileType = text; path = Notes; sourceTree = "<group>"; };
 		7F98E67B21A5E09600C7448A /* Effect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Effect.swift; sourceTree = "<group>"; };
+		7FB3922721B1B210008BC726 /* Dice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dice.swift; sourceTree = "<group>"; };
 		FA029DF121A067F70012B62B /* ItemWithStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemWithStats.swift; sourceTree = "<group>"; };
 		FA029DF321A07C320012B62B /* Warrior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Warrior.swift; sourceTree = "<group>"; };
 		FA029DF521A07C3E0012B62B /* Mage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mage.swift; sourceTree = "<group>"; };
@@ -239,6 +241,7 @@
 				FA02D5C1219F71E100DA7419 /* Inventory.swift */,
 				7F98E67B21A5E09600C7448A /* Effect.swift */,
 				7F187F7321AF16870009873F /* Shop.swift */,
+				7FB3922721B1B210008BC726 /* Dice.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -397,6 +400,7 @@
 				FA02D5C2219F71E100DA7419 /* Inventory.swift in Sources */,
 				FA02D5BE219F70D100DA7419 /* Consumable.swift in Sources */,
 				FA02D5BC219F70C700DA7419 /* Boots.swift in Sources */,
+				7FB3922821B1B210008BC726 /* Dice.swift in Sources */,
 				7F98E67C21A5E09600C7448A /* Effect.swift in Sources */,
 				FA029DF421A07C320012B62B /* Warrior.swift in Sources */,
 				FA02D5AD219F703000DA7419 /* Item.swift in Sources */,

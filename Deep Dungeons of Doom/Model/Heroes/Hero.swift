@@ -12,7 +12,7 @@ enum MyError: Error {
     case runtimeError(String)
     case numberError(String)
 }
-
+/*
 extension Dictionary {
     mutating func merge(dict: [Key: Double]){
         for (k, v) in dict {
@@ -20,7 +20,7 @@ extension Dictionary {
         }
     }
 }
-
+*/
 internal let initItemLevel : Int = 30
 
 class Hero {
@@ -56,8 +56,7 @@ class Hero {
     
     func getPower(){
         var pwrDic : [String:Double] = ["":0.0]
-        pwrDic.merge(dict: inventory.weapon.getPower())
-        /*
+    /*      pwrDic.merge(dict: inventory.weapon.getPower())
        pwrDic.mapValues { (value) -> Double in
             return (value ?? 0) + inventory.weapon.getPower()[key]
         }
@@ -67,10 +66,13 @@ class Hero {
             result[offer.company] = (result[offer.company] ?? 0 ) + offer.amount
         } */
  
-        pwrDic.map { (arg) -> [String:Double] in
+     /*   pwrDic.map { (arg) -> [String:Double] in
             let (key, value) = arg
             return pwrDic[key] = pwrDic[key]  + inventory.weapon.getPower()[key] ?? 0
             }
+ */
+        
+        
     }
  
 }
