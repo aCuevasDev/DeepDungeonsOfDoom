@@ -70,7 +70,7 @@ class Hero : Character{
         
     }
     
-    func use(){
+    func useConsumable(){
         if(self.inventory.consumable != nil){
             self.inventory.consumable!.use(hero: self)
         }else {
