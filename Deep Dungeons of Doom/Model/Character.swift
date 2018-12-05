@@ -13,13 +13,13 @@ class Character{
     var image : UIImage = UIImage()
     var maxHealth : Int!
     let minHealth : Int = 0
-    var damage : Int = 0
+    var power : Int = 0
     var name : String = ""
     var exp : Int = 0
     var gold : Int = 100
     var health : Int = 0
     
     func attack(T : Character){
-        T.health -= damage
+        T.health -= power
     }
 }

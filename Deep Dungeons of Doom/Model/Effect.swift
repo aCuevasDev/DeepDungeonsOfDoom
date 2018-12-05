@@ -13,11 +13,11 @@ class Effect {
         case heal
     }
     
-    
     var bonus : Int = 0
     var type : String = ""
     
     init(){
+        
     }
     
     init(type : String){

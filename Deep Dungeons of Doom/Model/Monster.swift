@@ -16,7 +16,7 @@ class Monster : Character{
         
         super.init()
         self.name = name
-        self.damage = damage
+        self.power = damage
         self.gold = gold
         self.maxHealth = health
         self.health = maxHealth

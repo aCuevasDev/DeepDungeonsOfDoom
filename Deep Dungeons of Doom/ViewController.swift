@@ -46,6 +46,14 @@ class ViewController: UIViewController {
         print(warrior.health)
         monster.attack(T: warrior)
         print(warrior.health)
+        
+        let heal : Effect = Effect(type: Effect.tags.heal.rawValue)
+        let potion : Consumable = Consumable(effect: heal)
+        
+        warrior.inventory.consumable = potion
+        
+        warrior.inventory.consumable?.use(hero: warrior)
+        print(warrior.health)
     }
 
 
