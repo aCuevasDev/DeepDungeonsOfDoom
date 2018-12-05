@@ -44,7 +44,7 @@ class ViewController: UIViewController {
         let monster : Monster = Monster(name: "mon1", damage: 2, gold: 100, health: 3, exp: 100, image: UIImage())
         
         print(warrior.health)
-        monster.attack(T: warrior)
+        monster.attackEnemy(T: warrior)
         print(warrior.health)
         
         let heal : Effect = Effect(type: Effect.tags.heal.rawValue)
@@ -54,13 +54,26 @@ class ViewController: UIViewController {
         
         warrior.useConsumable()
         print(warrior.health)
-        
+        warrior.reload()
+        print("atk")
+        print(warrior.atk)
         let item : Sword = Sword(cst: 10, ilvl: 100, image: UIImage(), hands: 1)
         print(warrior.inventory.weapon)
         warrior.buyItem(item: item)
         print(warrior.inventory.weapon)
         warrior.inventory.weapon.printStats()
         print(warrior.gold)
+        warrior.reload()
+        print("atk")
+        print(warrior.atk)
+        
+        let item2 : Bow = Bow(cst: 10, ilvl: 100, image: UIImage())
+        warrior.buyItem(item: item2)
+        print(warrior.inventory.weapon)
+        warrior.inventory.weapon.printStats()
+        warrior.reload()
+        print("atk")
+        print(warrior.atk)
         
     }
 

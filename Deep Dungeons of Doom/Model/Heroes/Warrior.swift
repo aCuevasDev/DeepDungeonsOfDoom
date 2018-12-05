@@ -30,5 +30,11 @@ class Warrior : Hero {
         defRatio = 0.5
         magRatio = 0.2
         lckRatio = 0.3
+        
+        reload()
+    }
+    
+    func reload(){
+        self.atk = self.inventory.weapon.atk * atkRatio
     }
 }

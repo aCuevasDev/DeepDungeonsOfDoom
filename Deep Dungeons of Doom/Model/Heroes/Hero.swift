@@ -33,6 +33,11 @@ class Hero : Character{
     var magRatio : Double = 0
     var lckRatio : Double = 0
     
+    var atk : Double = 0
+    var def : Double = 0
+    var mag : Double = 0
+    var lck : Double = 0
+    
     /*
     init() throws {
  
