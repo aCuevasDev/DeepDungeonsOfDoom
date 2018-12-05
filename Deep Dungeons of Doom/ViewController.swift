@@ -74,7 +74,7 @@ class ViewController: UIViewController {
         warrior.reload()
         print("atk")
         print(warrior.atk)
-        
+        //TODO MODIFY RATIOS?
     }
 
 
