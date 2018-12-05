@@ -18,4 +18,8 @@ class Item{
         cost = 0
         iLvl = 0
     } */
+    
+   /* func getClass() -> Class{
+        return self.getClass()
+    } */
 }

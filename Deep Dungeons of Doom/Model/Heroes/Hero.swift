@@ -74,7 +74,47 @@ class Hero : Character{
         if(self.inventory.consumable != nil){
             self.inventory.consumable!.use(hero: self)
         }else {
-            //TODO ALERT MESSAGE TO USER
+            //TODO ALERT MESSAGE TO USER (NO CONSUMABLE)
+        }
+    }
+    
+    func buyItem(item : Item){
+        if(gold > item.cost){
+            gold -= item.cost
+            
+            switch type(of: item){
+            case is Weapon.Type:
+                self.inventory.weapon = item as! Weapon
+                break
+            case is Helmet.Type:
+                self.inventory.helmet = item as! Helmet
+                break
+            case is Cuirass.Type:
+                self.inventory.cuirass = item as! Cuirass
+                break
+            case is Boots.Type:
+                self.inventory.boots = item as! Boots
+                break
+            case is Trinket.Type:
+                self.inventory.trinket = item as! Trinket
+                break
+            case is OffHand.Type:
+                if(self.inventory.weapon.hands == 1){
+                    self.inventory.offHand = item as! OffHand
+                }else {
+                    //TODO ERROR MESSAGE, CAN'T HAVE A 2 HANDED WEAPON AND OFFHAND
+                    gold += item.cost
+                }
+                break
+            case is Consumable.Type:
+                self.inventory.consumable = item as! Consumable
+                break
+                
+            default:
+                break
+            }
+        }else {
+            //TODO ALERT MESSAGE TO USER (CANT BUY)
         }
     }
     

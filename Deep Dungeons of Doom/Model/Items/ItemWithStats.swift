@@ -33,6 +33,11 @@ class ItemWithStats : Item {
         lckRatio = 0.0
     } */
     
+    override init() {
+        super.init()
+        round()
+    }
+    
     func printStats(){
         round()
         print(String(describing: self))

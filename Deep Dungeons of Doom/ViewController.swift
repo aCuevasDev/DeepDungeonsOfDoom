@@ -54,6 +54,14 @@ class ViewController: UIViewController {
         
         warrior.useConsumable()
         print(warrior.health)
+        
+        let item : Sword = Sword(cst: 10, ilvl: 100, image: UIImage(), hands: 1)
+        print(warrior.inventory.weapon)
+        warrior.buyItem(item: item)
+        print(warrior.inventory.weapon)
+        warrior.inventory.weapon.printStats()
+        print(warrior.gold)
+        
     }
 
 
