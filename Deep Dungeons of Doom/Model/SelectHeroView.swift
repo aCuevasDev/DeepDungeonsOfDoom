@@ -18,16 +18,29 @@ class SelectHeroView {
     var magicImage : UIImage = UIImage()
     
     var health : Int = 0
-    var attack : Int = 0
-    var defense : Int = 0
-    var luck : Int = 0
-    var magic : Int = 0
+    var attack : Double = 0
+    var defense : Double = 0
+    var luck : Double = 0
+    var magic : Double = 0
     
     var name : String = ""
     
+    var view : UIView = UIView()
     
-    func update(T : AnyObject){
+    
+   /* constructor to customize the images
+     init(heroImage : UIImage, heartImage : UIImage, attackImage : UIImage, defenseImage : UIImage,luckImage : UIImage,magicImage : UIImage, hero : Hero) {
         
+    } */
+    
+    init(hero : Hero){
+        self.health = hero.health
+        self.attack = hero.atk
+        self.defense = hero.def
+        self.luck = hero.lck
+        self.magic = hero.mag
+        self.name = hero.name
     }
+    
     
 }
