@@ -52,7 +52,7 @@ class ViewController: UIViewController {
         
         warrior.inventory.consumable = potion
         
-        warrior.inventory.consumable?.use(hero: warrior)
+        warrior.use(consumable: warrior.inventory.consumable!)
         print(warrior.health)
     }
 

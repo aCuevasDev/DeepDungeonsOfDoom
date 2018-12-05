@@ -70,6 +70,10 @@ class Hero : Character{
         
     }
     
+    func use(consumable : Consumable){
+        consumable.use(hero: self)
+    }
+    
 
  
 }
