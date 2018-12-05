@@ -70,8 +70,12 @@ class Hero : Character{
         
     }
     
-    func use(consumable : Consumable){
-        consumable.use(hero: self)
+    func use(){
+        if(self.inventory.consumable != nil){
+            self.inventory.consumable!.use(hero: self)
+        }else {
+            //TODO ALERT MESSAGE TO USER
+        }
     }
     
 
