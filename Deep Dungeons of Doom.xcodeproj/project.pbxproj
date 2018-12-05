@@ -10,9 +10,9 @@
 		7F187F7421AF16880009873F /* Shop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F187F7321AF16870009873F /* Shop.swift */; };
 		7F4BA04921B843F6006ED86A /* Monster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4BA04821B843F6006ED86A /* Monster.swift */; };
 		7F4BA04B21B84424006ED86A /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4BA04A21B84424006ED86A /* Character.swift */; };
-		7F4BA04E21B84ADA006ED86A /* DeepDungeonUserCases.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F4BA04C21B84ADA006ED86A /* DeepDungeonUserCases.png */; };
-		7F4BA04F21B84ADA006ED86A /* DeepDungeonUserCases.mdj in Resources */ = {isa = PBXBuildFile; fileRef = 7F4BA04D21B84ADA006ED86A /* DeepDungeonUserCases.mdj */; };
 		7F4BA05121B85308006ED86A /* SelectHeroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4BA05021B85308006ED86A /* SelectHeroView.swift */; };
+		7F4BA05921B85AC8006ED86A /* DeepDungeonUserCases.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F4BA05821B85AC8006ED86A /* DeepDungeonUserCases.png */; };
+		7F4BA05B21B85AE4006ED86A /* DeepDungeonUserCases.mdj in Resources */ = {isa = PBXBuildFile; fileRef = 7F4BA05A21B85AE4006ED86A /* DeepDungeonUserCases.mdj */; };
 		7F6D97A721A87A9E00216E66 /* Notes in Resources */ = {isa = PBXBuildFile; fileRef = 7F6D97A621A87A9E00216E66 /* Notes */; };
 		7F98E67C21A5E09600C7448A /* Effect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F98E67B21A5E09600C7448A /* Effect.swift */; };
 		7FB3922821B1B210008BC726 /* Dice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB3922721B1B210008BC726 /* Dice.swift */; };
@@ -67,9 +67,9 @@
 		7F187F7321AF16870009873F /* Shop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shop.swift; sourceTree = "<group>"; };
 		7F4BA04821B843F6006ED86A /* Monster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Monster.swift; sourceTree = "<group>"; };
 		7F4BA04A21B84424006ED86A /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
-		7F4BA04C21B84ADA006ED86A /* DeepDungeonUserCases.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DeepDungeonUserCases.png; sourceTree = "<group>"; };
-		7F4BA04D21B84ADA006ED86A /* DeepDungeonUserCases.mdj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DeepDungeonUserCases.mdj; sourceTree = "<group>"; };
 		7F4BA05021B85308006ED86A /* SelectHeroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectHeroView.swift; sourceTree = "<group>"; };
+		7F4BA05821B85AC8006ED86A /* DeepDungeonUserCases.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DeepDungeonUserCases.png; sourceTree = "<group>"; };
+		7F4BA05A21B85AE4006ED86A /* DeepDungeonUserCases.mdj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = DeepDungeonUserCases.mdj; path = ../../DeepDungeonUserCases.mdj; sourceTree = "<group>"; };
 		7F6D97A621A87A9E00216E66 /* Notes */ = {isa = PBXFileReference; lastKnownFileType = text; path = Notes; sourceTree = "<group>"; };
 		7F98E67B21A5E09600C7448A /* Effect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Effect.swift; sourceTree = "<group>"; };
 		7FB3922721B1B210008BC726 /* Dice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dice.swift; sourceTree = "<group>"; };
@@ -262,8 +262,8 @@
 		FADBDEF721AF3E0F005CD2B2 /* Information */ = {
 			isa = PBXGroup;
 			children = (
-				7F4BA04D21B84ADA006ED86A /* DeepDungeonUserCases.mdj */,
-				7F4BA04C21B84ADA006ED86A /* DeepDungeonUserCases.png */,
+				7F4BA05A21B85AE4006ED86A /* DeepDungeonUserCases.mdj */,
+				7F4BA05821B85AC8006ED86A /* DeepDungeonUserCases.png */,
 				FADBDEFD21AF3EB9005CD2B2 /* Deep Dungeon of Doom.mdj */,
 				FADBDEFC21AF3EB9005CD2B2 /* Deep Dungeons of Doom.png */,
 				7F6D97A621A87A9E00216E66 /* Notes */,
@@ -378,11 +378,11 @@
 				FADBDEFE21AF3EB9005CD2B2 /* Deep Dungeons of Doom.png in Resources */,
 				FA02D589219F6FCF00DA7419 /* LaunchScreen.storyboard in Resources */,
 				FA02D586219F6FCF00DA7419 /* Assets.xcassets in Resources */,
-				7F4BA04E21B84ADA006ED86A /* DeepDungeonUserCases.png in Resources */,
 				7F6D97A721A87A9E00216E66 /* Notes in Resources */,
-				7F4BA04F21B84ADA006ED86A /* DeepDungeonUserCases.mdj in Resources */,
 				FA02D584219F6FCC00DA7419 /* Main.storyboard in Resources */,
+				7F4BA05B21B85AE4006ED86A /* DeepDungeonUserCases.mdj in Resources */,
 				FADBDEFF21AF3EB9005CD2B2 /* Deep Dungeon of Doom.mdj in Resources */,
+				7F4BA05921B85AC8006ED86A /* DeepDungeonUserCases.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

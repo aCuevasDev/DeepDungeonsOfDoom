@@ -9,5 +9,5 @@
 import Foundation
 
 class OffHand : ItemWithStats{
-    
+    //TODO THIS
 }

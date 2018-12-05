@@ -10,4 +10,8 @@ import Foundation
 
 class Dice {
     
+    
+    func roll(T : Character){
+        
+    }
 }
