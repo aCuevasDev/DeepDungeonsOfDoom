@@ -41,6 +41,11 @@ class ViewController: UIViewController {
         warrior.inventory.cuirass.printStats()
         warrior.inventory.boots.printStats()
         
+        let monster : Monster = Monster(name: "mon1", damage: 2, gold: 100, health: 3, exp: 100, image: UIImage())
+        
+        print(warrior.health)
+        monster.attack(T: warrior)
+        print(warrior.health)
     }
 
 

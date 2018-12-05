@@ -23,15 +23,10 @@ extension Dictionary {
 */
 internal let initItemLevel : Int = 30
 
-class Hero {
-    var maxHealth : Int!
-    let minHealth : Int = 0
-    
-    var name : String = ""
-    var exp : Int = 0
-    var gold : Int = 100
+class Hero : Character{
+
     var inventory : Inventory = Inventory()
-    var health : Int = 0
+
     
     var atkRatio : Double = 0
     var defRatio : Double = 0
@@ -55,8 +50,8 @@ class Hero {
     } */
     
     func getPower(){
-        var pwrDic : [String:Double] = ["":0.0]
-    /*      pwrDic.merge(dict: inventory.weapon.getPower())
+      /*  var pwrDic : [String:Double] = ["":0.0]
+          pwrDic.merge(dict: inventory.weapon.getPower())
        pwrDic.mapValues { (value) -> Double in
             return (value ?? 0) + inventory.weapon.getPower()[key]
         }
@@ -74,5 +69,7 @@ class Hero {
         
         
     }
+    
+
  
 }
