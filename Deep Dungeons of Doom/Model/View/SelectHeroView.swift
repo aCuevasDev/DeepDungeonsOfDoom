@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class SelectHeroView {
+class SelectHeroView : UIView{
     var heroImage : UIImage = UIImage()
     var heartImage : UIImage = UIImage()
     var atackImage : UIImage = UIImage()
@@ -41,6 +41,12 @@ class SelectHeroView {
         self.magic = hero.mag
         self.name = hero.name
     }
+    
+    func getView(){
+        view.
+    }
+    
+    
     
     
 }
