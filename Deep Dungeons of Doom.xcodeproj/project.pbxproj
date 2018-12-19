@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F1317B021CAC3F4000F4F76 /* ACT03_1819_DeepDungeonsOfDoom.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7F1317AF21CAC3F4000F4F76 /* ACT03_1819_DeepDungeonsOfDoom.pdf */; };
 		7F187F7421AF16880009873F /* Shop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F187F7321AF16870009873F /* Shop.swift */; };
 		7F4BA04921B843F6006ED86A /* Monster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4BA04821B843F6006ED86A /* Monster.swift */; };
 		7F4BA04B21B84424006ED86A /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4BA04A21B84424006ED86A /* Character.swift */; };
@@ -63,6 +64,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7F1317AF21CAC3F4000F4F76 /* ACT03_1819_DeepDungeonsOfDoom.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = ACT03_1819_DeepDungeonsOfDoom.pdf; sourceTree = "<group>"; };
 		7F187F7321AF16870009873F /* Shop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shop.swift; sourceTree = "<group>"; };
 		7F4BA04821B843F6006ED86A /* Monster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Monster.swift; sourceTree = "<group>"; };
 		7F4BA04A21B84424006ED86A /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
@@ -272,6 +274,7 @@
 				FADBDEFD21AF3EB9005CD2B2 /* Deep Dungeon of Doom.mdj */,
 				FADBDEFC21AF3EB9005CD2B2 /* Deep Dungeons of Doom.png */,
 				7F6D97A621A87A9E00216E66 /* Notes */,
+				7F1317AF21CAC3F4000F4F76 /* ACT03_1819_DeepDungeonsOfDoom.pdf */,
 			);
 			path = Information;
 			sourceTree = "<group>";
@@ -383,6 +386,7 @@
 				FADBDEFE21AF3EB9005CD2B2 /* Deep Dungeons of Doom.png in Resources */,
 				FA02D589219F6FCF00DA7419 /* LaunchScreen.storyboard in Resources */,
 				FA02D586219F6FCF00DA7419 /* Assets.xcassets in Resources */,
+				7F1317B021CAC3F4000F4F76 /* ACT03_1819_DeepDungeonsOfDoom.pdf in Resources */,
 				7F6D97A721A87A9E00216E66 /* Notes in Resources */,
 				FA02D584219F6FCC00DA7419 /* Main.storyboard in Resources */,
 				FADBDEFF21AF3EB9005CD2B2 /* Deep Dungeon of Doom.mdj in Resources */,

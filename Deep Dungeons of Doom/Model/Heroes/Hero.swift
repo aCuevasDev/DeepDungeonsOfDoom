@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 enum MyError: Error {
     case runtimeError(String)
