@@ -27,6 +27,7 @@ class ViewController: UIViewController {
     */
         // Do any additional setup after loading the view, typically from a nib.
         //TODO USE JSON OR CSV TO SAVE INITIAL SETUP
+        //TODO modalpopup mirar repositorio dani para en el inventario mostrar los valores de cada item cuando se haga click.
         /*
         do {
             guard var hero : Hero =  try Hero() else { return }
