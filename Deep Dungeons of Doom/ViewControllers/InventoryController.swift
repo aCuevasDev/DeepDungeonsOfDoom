@@ -36,6 +36,17 @@ class InventoryController : UIViewController {
         bootsImg.image = playingHero.inventory.boots.image
         weaponImg.image = playingHero.inventory.weapon.image
         offHandImg.image = playingHero.inventory.offHand?.image
+        torsoImg.image = playingHero.inventory.cuirass.image
+        helmetImg.image = playingHero.inventory.helmet.image
+        
+        heroNameLbl.text = playingHero.name
+        atkVal.text = String(playingHero.atk)
+        healthLbl.text = "\(playingHero.health) / \(String(describing: playingHero.maxHealth))"
+        defVal.text = String(playingHero.def)
+        lckVal.text = String(playingHero.lck)
+        gldVal.text = String(playingHero.gold)
+        expVal.text = String(playingHero.exp)
+        magVal.text = String(playingHero.mag)
         
 
     }
