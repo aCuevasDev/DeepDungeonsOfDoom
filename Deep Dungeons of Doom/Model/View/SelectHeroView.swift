@@ -20,6 +20,23 @@ class SelectHeroView : UIView{
     var defenseImage : UIImage = UIImage()
     var luckImage : UIImage = UIImage()
     var magicImage : UIImage = UIImage()
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setupViews()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setupViews()
+    }
+    
+    func setupViews(){
+        self.addSubview(getHeroView(hero: warrior))
+        self.addSubview(getHeroView(hero: mage))
+        self.addSubview(getHeroView(hero: ranger))
+    }
+    
  
     //TODO VIEW LOOK GIT DANI
     //https://github.com/dmorenoar/ViewProgramactlly/blob/master/ViewProgramactlly/VistaPersonalizada.swift

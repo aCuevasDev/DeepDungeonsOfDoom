@@ -13,7 +13,7 @@ class SelectHeroController : UIViewController {
     
     override func viewDidLoad() {
         let warrior : Warrior = Warrior()
-        UIView view = SelectHeroView.getAllHeroViews(<#T##SelectHeroView#>)
+        var view : UIView = SelectHeroView(frame: CGRect(x: 15, y: 250, width: 500, height: 500))
         self.view.addSubview(view)
     }
 }
