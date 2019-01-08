@@ -3,8 +3,7 @@
 //  Deep Dungeons of Doom
 //
 //  Created by Alex Cuevas on 05/12/2018.
-//  Copyright © 2018 Alex. All rights reserved.
-//
+//  Copyright 2018 Alex. All rights reserved.
 
 import Foundation
 import UIKit
@@ -20,6 +19,8 @@ class SelectHeroView : UIView{
     var defenseImage : UIImage = UIImage()
     var luckImage : UIImage = UIImage()
     var magicImage : UIImage = UIImage()
+    
+    var currentY : Int = 0
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -38,21 +39,24 @@ class SelectHeroView : UIView{
     }
     
     func getHeroView(hero : Hero) -> UIView{
-        var heroImage : UIImage = hero.image
+        let viewHeight : Int = 200
+        let healthWidth = 50
+        var healthCounter = 0
         
-        let view : UIView = UIView(frame: CGRect(x: 0, y: 0, width: 400, height: 200))
+        let view : UIView = UIView(frame: CGRect(x: 0, y: currentY, width: 415, height: viewHeight))
         let backgroundView : UIImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: view.bounds.height))
         backgroundView.image = UIImage(named: "back_heroe")
         view.addSubview(backgroundView)
+        currentY += viewHeight+20
        // backgroundView.contentMode = .scaleAspectFit
         
         let heroView : UIImageView = UIImageView(image: hero.image)
-        heroView.contentMode = .scaleAspectFit
-        heroView.frame = CGRect(x: 20, y: 20, width: 50, height: 100)
+//        heroView.contentMode = .scaleAspectFit
+        heroView.frame = CGRect(x: 10, y: 30, width: 130, height: 130)
         view.addSubview(heroView)
         
         let nameLabel:UILabel = {
-            let lbl:UILabel = UILabel(frame: CGRect(x: 100, y: 20, width: 60, height: 25))
+            let lbl:UILabel = UILabel(frame: CGRect(x: 140, y: 30, width: 60, height: 25))
             lbl.text = hero.name
             
             lbl.textColor = UIColor.white
@@ -60,30 +64,113 @@ class SelectHeroView : UIView{
         }()
         view.addSubview(nameLabel)
         
+
+        func healthIcon(healthCount : Int) -> UIImageView {
+            let view:UIImageView = UIImageView(frame: CGRect(x: 195 + healthCount*healthWidth, y: 20, width: healthWidth, height: 50))
+            view.image = UIImage(named: "heart")
+            return view
+        }
+        let numHearts : Int = hero.maxHealth / 100
+        for _ in 1...numHearts{
+            view.addSubview(healthIcon(healthCount: healthCounter))
+            healthCounter += 1
+        }
+        
         let atkLabel:UILabel = {
-            let lbl:UILabel = UILabel(frame: CGRect(x: 100, y: 80, width: 40, height: 25))
-            lbl.text = String(hero.atk)
+            let lbl:UILabel = UILabel(frame: CGRect(x: 140, y: 80, width: 40, height: 25))
+            lbl.text = "ATK"
             lbl.textColor = UIColor.white
             return lbl
         }()
         view.addSubview(atkLabel)
         
-        let defLabel:UILabel = {
-            let lbl:UILabel = UILabel(frame: CGRect(x: 100, y: 140, width: 40, height: 25))
+        let atkIcon:UIImageView = {
+            let view:UIImageView = UIImageView(frame: CGRect(x: 180, y: 65, width: 50, height: 50))
+            view.image = UIImage(named: "damage")
+            return view
+        }()
+        view.addSubview(atkIcon)
+        
+        let atkValue:UILabel = {
+            let lbl:UILabel = UILabel(frame: CGRect(x: 230, y: 80, width: 40, height: 25))
             lbl.text = String(hero.atk)
+            lbl.textColor = UIColor.white
+            return lbl
+        }()
+        view.addSubview(atkValue)
+        
+        let defLabel:UILabel = {
+            let lbl:UILabel = UILabel(frame: CGRect(x: 140, y: 140, width: 40, height: 25))
+            lbl.text = "DEF"
             lbl.textColor = UIColor.white
             return lbl
         }()
         view.addSubview(defLabel)
         
+        let defIcon:UIImageView = {
+            let view:UIImageView = UIImageView(frame: CGRect(x: 180, y: 120, width: 50, height: 50))
+            view.image = UIImage(named: "defensa")
+            return view
+        }()
+        view.addSubview(defIcon)
+        
+        let defValue:UILabel = {
+            let lbl:UILabel = UILabel(frame: CGRect(x: 230, y: 140, width: 40, height: 25))
+            lbl.text = String(hero.def)
+            lbl.textColor = UIColor.white
+            return lbl
+        }()
+        view.addSubview(defValue)
+        
+        let magLabel:UILabel = {
+            let lbl:UILabel = UILabel(frame: CGRect(x: 270, y: 80, width: 40, height: 25))
+            lbl.text = "MAG"
+            lbl.textColor = UIColor.white
+            return lbl
+        }()
+        view.addSubview(magLabel)
+        
+        let magIcon:UIImageView = {
+            let view:UIImageView = UIImageView(frame: CGRect(x: 310, y: 65, width: 50, height: 50))
+            view.image = UIImage(named: "magic")
+            return view
+        }()
+        view.addSubview(magIcon)
+        
+        let magValue:UILabel = {
+            let lbl:UILabel = UILabel(frame: CGRect(x: 360, y: 80, width: 40, height: 25))
+            lbl.text = String(hero.mag)
+            lbl.textColor = UIColor.white
+            return lbl
+        }()
+        view.addSubview(magValue)
+        
+        let lckLabel:UILabel = {
+            let lbl:UILabel = UILabel(frame: CGRect(x: 270, y: 140, width: 40, height: 25))
+            lbl.text = "LCK"
+            lbl.textColor = UIColor.white
+            return lbl
+        }()
+        view.addSubview(lckLabel)
+        
+        let lckIcon:UIImageView = {
+            let view:UIImageView = UIImageView(frame: CGRect(x: 310, y: 120, width: 50, height: 50))
+            view.image = UIImage(named: "lucky")
+            return view
+        }()
+        view.addSubview(lckIcon)
+        
+        let lckValue:UILabel = {
+            let lbl:UILabel = UILabel(frame: CGRect(x: 360, y: 140, width: 40, height: 25))
+            lbl.text = String(hero.mag)
+            lbl.textColor = UIColor.white
+            return lbl
+        }()
+        view.addSubview(lckValue)
+        
         return view
+        
+        
     }
-    
-    func getAllHeroViews() -> UIView{
-        return getHeroView(hero: warrior)
-    }
-    
-    
-    
     
 }

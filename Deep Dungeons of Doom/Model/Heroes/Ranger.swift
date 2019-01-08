@@ -22,7 +22,7 @@ class Ranger : Hero{
         
         name = "Ranger"
         inventory = Inventory()
-        maxHealth = 3
+        maxHealth = 300
         health = maxHealth
         
         atkRatio = 0.5

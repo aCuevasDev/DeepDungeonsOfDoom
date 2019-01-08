@@ -23,7 +23,7 @@ class Mage : Hero{
         
         name = "Mage"
         inventory = Inventory()
-        maxHealth = 2
+        maxHealth = 200
         health = maxHealth
         
         atkRatio = 0.2

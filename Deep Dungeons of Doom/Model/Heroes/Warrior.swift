@@ -23,8 +23,9 @@ class Warrior : Hero {
         
         name = "Warrior"
         inventory = Inventory(weapon: initWeapon, helmet: initHelmet, cuirass: initCuirass, boots: initBoots, trinket: initTrinket) //TODO insert initial items into inventory
-        maxHealth = 4
+        maxHealth = 400
         health = maxHealth
+        self.image = UIImage(named: "heroe1")!
         
         atkRatio = 0.6
         defRatio = 0.5
