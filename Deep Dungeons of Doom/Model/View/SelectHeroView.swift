@@ -11,6 +11,10 @@ import UIKit
 
 class SelectHeroView : UIView{
     
+    let warrior : Warrior = Warrior()
+    let ranger : Ranger = Ranger()
+    let mage : Mage = Mage()
+    
     var heartImage : UIImage = UIImage()
     var atackImage : UIImage = UIImage()
     var defenseImage : UIImage = UIImage()
@@ -75,6 +79,10 @@ class SelectHeroView : UIView{
         view.addSubview(defLabel)
         
         return view
+    }
+    
+    func getAllHeroViews() -> UIView{
+        return getHeroView(hero: warrior)
     }
     
     
