@@ -3,7 +3,7 @@
 //  Deep Dungeons of Doom
 //
 //  Created by Alex Cuevas on 05/12/2018.
-//  Copyright Â© 2018 Alex. All rights reserved.
+//  Copyright © 2018 Alex. All rights reserved.
 //
 
 import Foundation
@@ -37,27 +37,8 @@ class SelectHeroView : UIView{
         self.addSubview(getHeroView(hero: ranger))
     }
     
- 
-    //TODO VIEW LOOK GIT DANI
-    //https://github.com/dmorenoar/ViewProgramactlly/blob/master/ViewProgramactlly/VistaPersonalizada.swift
-   //TODO SEPARATE ALL THE VIEWS INTO DIFFERENT METHODS
-    
-    /* constructor to customize the images
-     init(heroImage : UIImage, heartImage : UIImage, attackImage : UIImage, defenseImage : UIImage,luckImage : UIImage,magicImage : UIImage, hero : Hero) {
-        
-    } */
-    
-//    init(hero1,hero2,hero3)
-    
     func getHeroView(hero : Hero) -> UIView{
         var heroImage : UIImage = hero.image
-        
-        var name : String = hero.name
-        var health : Int = hero.maxHealth
-        var attack : Double = hero.atk
-        var defense : Double = hero.def
-        var luck : Double = hero.lck
-        var magic : Double = hero.mag
         
         let view : UIView = UIView(frame: CGRect(x: 0, y: 0, width: 400, height: 200))
         let backgroundView : UIImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: view.bounds.height))
