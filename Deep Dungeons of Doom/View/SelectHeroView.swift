@@ -13,12 +13,7 @@ class SelectHeroView : UIView{
     let warrior : Warrior = Warrior()
     let ranger : Ranger = Ranger()
     let mage : Mage = Mage()
-    
-    var heartImage : UIImage = UIImage()
-    var atackImage : UIImage = UIImage()
-    var defenseImage : UIImage = UIImage()
-    var luckImage : UIImage = UIImage()
-    var magicImage : UIImage = UIImage()
+    var currentHero : Hero = Hero()
     
     var currentY : Int = 0
     
@@ -33,21 +28,45 @@ class SelectHeroView : UIView{
     }
     
     func setupViews(){
+        currentHero = warrior
         self.addSubview(getHeroView(hero: warrior))
+        currentHero = mage
         self.addSubview(getHeroView(hero: mage))
+        currentHero = ranger
         self.addSubview(getHeroView(hero: ranger))
+    }
+    //Segue doesn't work
+    @objc func buttonAction(sender: CustomButton!) {
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        
+        guard let selectController = storyboard.instantiateViewController(withIdentifier: "SelectHeroController") as? SelectHeroController else {
+            print("Couldn't find controller")
+            return
+        }
+        
+        selectController.push()
+        print(sender.hero.name)
+        
     }
     
     func getHeroView(hero : Hero) -> UIView{
         let viewHeight : Int = 200
+        let viewWidth : Int = 415
         let healthWidth = 50
         var healthCounter = 0
         
-        let view : UIView = UIView(frame: CGRect(x: 0, y: currentY, width: 415, height: viewHeight))
+        let view : UIView = UIView(frame: CGRect(x: 0, y: currentY, width: viewWidth, height: viewHeight))
+        
+        let btn : CustomButton = CustomButton(frame: CGRect(x: 0, y: currentY, width: viewWidth, height: viewHeight))
+        btn.hero = hero
+        btn.addTarget(self, action: #selector(buttonAction(sender:)), for: .touchUpInside)
+      //  view.addSubview(btn)
+        
         let backgroundView : UIImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: view.bounds.height))
         backgroundView.image = UIImage(named: "back_heroe")
         view.addSubview(backgroundView)
         currentY += viewHeight+20
+
        // backgroundView.contentMode = .scaleAspectFit
         
         let heroView : UIImageView = UIImageView(image: hero.image)
@@ -169,8 +188,7 @@ class SelectHeroView : UIView{
         view.addSubview(lckValue)
         
         return view
-        
-        
+
     }
     
 }

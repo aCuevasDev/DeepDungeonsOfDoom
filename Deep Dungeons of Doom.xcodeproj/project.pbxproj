@@ -44,6 +44,9 @@
 		FA02D5C2219F71E100DA7419 /* Inventory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA02D5C1219F71E100DA7419 /* Inventory.swift */; };
 		FA06389621E43D3E00536839 /* SelectHeroController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA06389521E43D3E00536839 /* SelectHeroController.swift */; };
 		FA06389821E43DC200536839 /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA06389721E43DC200536839 /* Repo.swift */; };
+		FABE75ED21E464FB00F48BF9 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABE75EC21E464FB00F48BF9 /* CustomButton.swift */; };
+		FABE75F021E469DF00F48BF9 /* MainMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABE75EF21E469DF00F48BF9 /* MainMenuController.swift */; };
+		FABE75F221E4781400F48BF9 /* InventoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABE75F121E4781400F48BF9 /* InventoryController.swift */; };
 		FADBDEFE21AF3EB9005CD2B2 /* Deep Dungeons of Doom.png in Resources */ = {isa = PBXBuildFile; fileRef = FADBDEFC21AF3EB9005CD2B2 /* Deep Dungeons of Doom.png */; };
 		FADBDEFF21AF3EB9005CD2B2 /* Deep Dungeon of Doom.mdj in Resources */ = {isa = PBXBuildFile; fileRef = FADBDEFD21AF3EB9005CD2B2 /* Deep Dungeon of Doom.mdj */; };
 /* End PBXBuildFile section */
@@ -109,6 +112,9 @@
 		FA02D5C1219F71E100DA7419 /* Inventory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inventory.swift; sourceTree = "<group>"; };
 		FA06389521E43D3E00536839 /* SelectHeroController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectHeroController.swift; sourceTree = "<group>"; };
 		FA06389721E43DC200536839 /* Repo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
+		FABE75EC21E464FB00F48BF9 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		FABE75EF21E469DF00F48BF9 /* MainMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuController.swift; sourceTree = "<group>"; };
+		FABE75F121E4781400F48BF9 /* InventoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryController.swift; sourceTree = "<group>"; };
 		FADBDEFC21AF3EB9005CD2B2 /* Deep Dungeons of Doom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Deep Dungeons of Doom.png"; sourceTree = "<group>"; };
 		FADBDEFD21AF3EB9005CD2B2 /* Deep Dungeon of Doom.mdj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Deep Dungeon of Doom.mdj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -197,6 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				7F4BA05021B85308006ED86A /* SelectHeroView.swift */,
+				FABE75EC21E464FB00F48BF9 /* CustomButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -225,6 +232,8 @@
 		FA02D57D219F6FCC00DA7419 /* Deep Dungeons of Doom */ = {
 			isa = PBXGroup;
 			children = (
+				FABE75EE21E469CD00F48BF9 /* ViewControllers */,
+				7FE67B5321C181AE00CD2385 /* View */,
 				FA02D5AE219F703A00DA7419 /* Model */,
 				FA02D57E219F6FCC00DA7419 /* AppDelegate.swift */,
 				FA02D580219F6FCC00DA7419 /* ViewController.swift */,
@@ -232,7 +241,6 @@
 				FA02D585219F6FCF00DA7419 /* Assets.xcassets */,
 				FA02D587219F6FCF00DA7419 /* LaunchScreen.storyboard */,
 				FA02D58A219F6FCF00DA7419 /* Info.plist */,
-				FA06389521E43D3E00536839 /* SelectHeroController.swift */,
 				FA06389721E43DC200536839 /* Repo.swift */,
 			);
 			path = "Deep Dungeons of Doom";
@@ -259,7 +267,6 @@
 		FA02D5AE219F703A00DA7419 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				7FE67B5321C181AE00CD2385 /* View */,
 				7F98E67A21A5E00700C7448A /* Heroes */,
 				7F98E67621A5DE7D00C7448A /* Items */,
 				FA02D5C1219F71E100DA7419 /* Inventory.swift */,
@@ -270,6 +277,16 @@
 				7F4BA04A21B84424006ED86A /* Character.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		FABE75EE21E469CD00F48BF9 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				FA06389521E43D3E00536839 /* SelectHeroController.swift */,
+				FABE75EF21E469DF00F48BF9 /* MainMenuController.swift */,
+				FABE75F121E4781400F48BF9 /* InventoryController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		FADBDEF721AF3E0F005CD2B2 /* Information */ = {
@@ -426,9 +443,11 @@
 				FA02D5B2219F707600DA7419 /* Weapon.swift in Sources */,
 				FA02D5B6219F708A00DA7419 /* Trinket.swift in Sources */,
 				FA029DFE21A088400012B62B /* Sword.swift in Sources */,
+				FABE75ED21E464FB00F48BF9 /* CustomButton.swift in Sources */,
 				FA02D581219F6FCC00DA7419 /* ViewController.swift in Sources */,
 				FA029E0021A089A80012B62B /* Bow.swift in Sources */,
 				FA029DF821A07C480012B62B /* Ranger.swift in Sources */,
+				FABE75F221E4781400F48BF9 /* InventoryController.swift in Sources */,
 				FA06389821E43DC200536839 /* Repo.swift in Sources */,
 				FA02D5C2219F71E100DA7419 /* Inventory.swift in Sources */,
 				FA02D5BE219F70D100DA7419 /* Consumable.swift in Sources */,
@@ -450,6 +469,7 @@
 				7F187F7421AF16880009873F /* Shop.swift in Sources */,
 				FA029DF621A07C3E0012B62B /* Mage.swift in Sources */,
 				7F4BA05121B85308006ED86A /* SelectHeroView.swift in Sources */,
+				FABE75F021E469DF00F48BF9 /* MainMenuController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

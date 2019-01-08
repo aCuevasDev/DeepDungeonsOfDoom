@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Tp7-dS-fkm">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -13,17 +13,44 @@
         <!--Select Hero Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="SelectHeroController" customModule="Deep_Dungeons_of_Doom" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SelectHeroController" id="BYZ-38-t0r" customClass="SelectHeroController" customModule="Deep_Dungeons_of_Doom" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CRG-tp-tnA">
+                                <rect key="frame" x="0.0" y="150" width="415" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="wariorSelect:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nUC-PI-ZCT"/>
+                                    <segue destination="bfq-AI-2xW" kind="show" id="Rlh-i7-6tO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hno-Vx-Kgc">
+                                <rect key="frame" x="0.0" y="370" width="415" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="mageSelect:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Og-9C-MdJ"/>
+                                    <segue destination="bfq-AI-2xW" kind="show" id="ZFR-qJ-iy1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XIn-nW-iWF">
+                                <rect key="frame" x="0.0" y="590" width="415" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="rangerSelect:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cVO-55-7Cl"/>
+                                    <segue destination="bfq-AI-2xW" kind="show" id="Ge0-JN-flA"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Vxk-OE-z0s"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="133.33333333333334" y="133.25892857142856"/>
+            <point key="canvasLocation" x="1043.4782608695652" y="133.25892857142856"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="UCq-vg-Ra8">
@@ -114,10 +141,10 @@
             </objects>
             <point key="canvasLocation" x="3611.594202898551" y="-548.4375"/>
         </scene>
-        <!--View Controller-->
+        <!--Main Menu Controller-->
         <scene sceneID="mny-D3-5s8">
             <objects>
-                <viewController id="bfq-AI-2xW" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainMenuController" id="bfq-AI-2xW" customClass="MainMenuController" customModule="Deep_Dungeons_of_Doom" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FRl-p9-SQc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -215,7 +242,8 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="o1C-rM-Wvg"/>
+                                    <action selector="back:" destination="bfq-AI-2xW" eventType="touchUpInside" id="bCs-Jm-dT4"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="D8X-vU-c6n"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -225,7 +253,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SaO-Ae-geY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1439.1304347826087" y="133.25892857142856"/>
+            <point key="canvasLocation" x="2349.275362318841" y="133.25892857142856"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="vHE-sf-V5p">
@@ -303,10 +331,10 @@
             </objects>
             <point key="canvasLocation" x="2197" y="867"/>
         </scene>
-        <!--View Controller-->
+        <!--Inventory Controller-->
         <scene sceneID="9iy-aj-cBN">
             <objects>
-                <viewController id="bfK-AC-FVt" sceneMemberID="viewController">
+                <viewController id="bfK-AC-FVt" customClass="InventoryController" customModule="Deep_Dungeons_of_Doom" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6Bi-iP-A8h">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -576,10 +604,45 @@
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="XZf-o3-Cif"/>
                     </view>
+                    <connections>
+                        <outlet property="atkVal" destination="dnh-rY-cLo" id="xoi-xF-oF7"/>
+                        <outlet property="bootsImg" destination="0iC-Bz-oJJ" id="eKu-zB-rU9"/>
+                        <outlet property="defVal" destination="oC7-hS-2TB" id="Obe-I1-cty"/>
+                        <outlet property="expVal" destination="NAo-GU-zJ5" id="pFo-58-K8k"/>
+                        <outlet property="gldVal" destination="JDl-cC-voN" id="EqB-BG-VTL"/>
+                        <outlet property="healthLbl" destination="fYC-UJ-m52" id="hN9-KK-dn4"/>
+                        <outlet property="helmetImg" destination="F8M-Iw-xf2" id="Fut-Q1-Zbn"/>
+                        <outlet property="heroNameLbl" destination="aMv-JP-Rno" id="ih0-MI-92g"/>
+                        <outlet property="lckVal" destination="fYN-OU-AeT" id="ofM-yX-R3t"/>
+                        <outlet property="magVal" destination="LxR-d1-pDa" id="3u3-ug-ZOI"/>
+                        <outlet property="offHandImg" destination="ges-BW-apc" id="7RY-Un-2Qf"/>
+                        <outlet property="potionImg" destination="Nqx-bl-lhs" id="4NV-35-vGW"/>
+                        <outlet property="torsoImg" destination="TdW-oU-fZF" id="0Jo-Gh-4pc"/>
+                        <outlet property="trinketImg" destination="9WE-Oq-lVD" id="X9j-Ka-ALC"/>
+                        <outlet property="weaponImg" destination="3Zq-dQ-U0W" id="BC2-dk-n8c"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M9G-4t-t2g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2925" y="148"/>
+            <point key="canvasLocation" x="3834.7826086956525" y="147.99107142857142"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="v3W-cN-KkG">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p3t-Ks-8wg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Tp7-dS-fkm" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ycJ-Tx-8GJ">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="aUH-Jx-NzJ"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="133.33333333333334" y="133.25892857142856"/>
         </scene>
     </scenes>
     <resources>
@@ -595,6 +658,7 @@
         <image name="xp" width="42" height="42.75"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="rPg-VJ-AsI"/>
+        <segue reference="HW2-V2-YXW"/>
+        <segue reference="D8X-vU-c6n"/>
     </inferredMetricsTieBreakers>
 </document>
