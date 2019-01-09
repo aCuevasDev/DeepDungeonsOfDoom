@@ -35,19 +35,16 @@ class SelectHeroView : UIView{
         currentHero = ranger
         self.addSubview(getHeroView(hero: ranger))
     }
-    //Segue doesn't work
-    @objc func buttonAction(sender: CustomButton!) {
-        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-        
-        guard let selectController = storyboard.instantiateViewController(withIdentifier: "SelectHeroController") as? SelectHeroController else {
-            print("Couldn't find controller")
-            return
-        }
-        
-        selectController.push()
-        print(sender.hero.name)
-        
-    }
+   
+    
+    
+    let btnClick:UIButton = {
+        let btn : CustomButton = CustomButton(frame: CGRect(x: 0, y: 0, width: 415, height: 200))
+        //viSew.addSubview(btn)
+        btn.backgroundColor = UIColor.blue
+        return btn
+    }()
+    
     
     func getHeroView(hero : Hero) -> UIView{
         let viewHeight : Int = 200
@@ -56,12 +53,9 @@ class SelectHeroView : UIView{
         var healthCounter = 0
         
         let view : UIView = UIView(frame: CGRect(x: 0, y: currentY, width: viewWidth, height: viewHeight))
-        
-        let btn : CustomButton = CustomButton(frame: CGRect(x: 0, y: currentY, width: viewWidth, height: viewHeight))
-        btn.hero = hero
-        btn.addTarget(self, action: #selector(buttonAction(sender:)), for: .touchUpInside)
-      //  view.addSubview(btn)
-        
+
+        view.addSubview(btnClick)
+      /*
         let backgroundView : UIImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: view.bounds.height))
         backgroundView.image = UIImage(named: "back_heroe")
         view.addSubview(backgroundView)
@@ -186,7 +180,7 @@ class SelectHeroView : UIView{
             return lbl
         }()
         view.addSubview(lckValue)
-        
+        */
         return view
 
     }

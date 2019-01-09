@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Tp7-dS-fkm">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -17,32 +17,6 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CRG-tp-tnA">
-                                <rect key="frame" x="0.0" y="150" width="415" height="200"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <action selector="wariorSelect:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nUC-PI-ZCT"/>
-                                    <segue destination="bfq-AI-2xW" kind="show" id="Rlh-i7-6tO"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hno-Vx-Kgc">
-                                <rect key="frame" x="0.0" y="370" width="415" height="200"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <action selector="mageSelect:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Og-9C-MdJ"/>
-                                    <segue destination="bfq-AI-2xW" kind="show" id="ZFR-qJ-iy1"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XIn-nW-iWF">
-                                <rect key="frame" x="0.0" y="590" width="415" height="200"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <action selector="rangerSelect:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cVO-55-7Cl"/>
-                                    <segue destination="bfq-AI-2xW" kind="show" id="Ge0-JN-flA"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -626,24 +600,6 @@
             </objects>
             <point key="canvasLocation" x="3834.7826086956525" y="147.99107142857142"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="v3W-cN-KkG">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="p3t-Ks-8wg" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Tp7-dS-fkm" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ycJ-Tx-8GJ">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="aUH-Jx-NzJ"/>
-                    </connections>
-                </navigationController>
-            </objects>
-            <point key="canvasLocation" x="133.33333333333334" y="133.25892857142856"/>
-        </scene>
     </scenes>
     <resources>
         <image name="DungeonBack-by matthias-andre" width="1382.4000244140625" height="777.5999755859375"/>
@@ -658,7 +614,7 @@
         <image name="xp" width="42" height="42.75"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="aFQ-iT-938"/>
         <segue reference="HW2-V2-YXW"/>
-        <segue reference="D8X-vU-c6n"/>
     </inferredMetricsTieBreakers>
 </document>
