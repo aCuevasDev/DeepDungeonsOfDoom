@@ -1,10 +1,4 @@
-//
-//  ShopController.swift
-//  Deep Dungeons of Doom
-//
-//  Created by alex on 13/01/2019.
-//  Copyright 2019 Alex. All rights reserved.
-//
+
 import Foundation
 import UIKit
 
