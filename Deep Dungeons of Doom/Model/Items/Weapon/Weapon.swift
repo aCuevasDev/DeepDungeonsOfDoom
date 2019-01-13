@@ -12,5 +12,8 @@ class Weapon : ItemWithStats{
     
     var hands : Int!
     
+    override init() {
+        super.init()
+    }
     
 }

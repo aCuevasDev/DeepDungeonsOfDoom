@@ -20,6 +20,7 @@ class Ranger : Hero{
     override init() {
         super.init()
         
+        self.image = heroImages["ranger"]!
         name = "Ranger"
         inventory = Inventory()
         maxHealth = 300

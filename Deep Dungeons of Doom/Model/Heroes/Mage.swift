@@ -21,6 +21,7 @@ class Mage : Hero{
     override init() {
         super.init()
         
+        self.image = heroImages["mage"]!
         name = "Mage"
         inventory = Inventory()
         maxHealth = 200

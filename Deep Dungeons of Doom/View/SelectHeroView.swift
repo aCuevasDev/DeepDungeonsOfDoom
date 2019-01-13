@@ -39,6 +39,7 @@ class SelectHeroView : UIView{
         
         let heroView : UIImageView = UIImageView(image: hero.image)
         heroView.frame = CGRect(x: 10, y: 30, width: 130, height: 130)
+        heroView.contentMode = UIView.ContentMode.scaleAspectFit
         self.addSubview(heroView)
         
         let nameLabel:UILabel = {

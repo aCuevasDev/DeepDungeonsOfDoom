@@ -39,6 +39,8 @@ class Hero : Character{
     var mag : Double = 0
     var lck : Double = 0
     
+    var lvl : Int = 1
+    
     /*
     init() throws {
  

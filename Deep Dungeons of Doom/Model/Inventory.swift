@@ -47,4 +47,15 @@ class Inventory {
             <#code#>
         }
     }*/
+    
+    func returnEquipped(item : Item) -> Item? {
+        if item is Weapon {return self.weapon}
+        else if item is Helmet {return self.helmet}
+        else if item is Cuirass {return self.cuirass}
+        else if item is Boots {return self.boots}
+        else if item is Trinket {return self.trinket}
+        else if item is Consumable {return self.consumable ?? nil}
+        else if item is OffHand {return self.offHand ?? nil}
+        else {return nil}
+    }
 }

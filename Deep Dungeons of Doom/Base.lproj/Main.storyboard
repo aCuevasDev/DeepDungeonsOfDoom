@@ -107,7 +107,7 @@
                                 </userDefinedRuntimeAttributes>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="4qq-jD-N2L"/>
                     </view>
                 </viewController>
@@ -221,7 +221,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="gdq-td-sHe"/>
                     </view>
                 </viewController>
@@ -229,10 +229,10 @@
             </objects>
             <point key="canvasLocation" x="2349.275362318841" y="133.25892857142856"/>
         </scene>
-        <!--View Controller-->
+        <!--Shop Controller-->
         <scene sceneID="vHE-sf-V5p">
             <objects>
-                <viewController id="dWk-CU-r2p" sceneMemberID="viewController">
+                <viewController id="dWk-CU-r2p" customClass="ShopController" customModule="Deep_Dungeons_of_Doom" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aiw-gQ-vdw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -271,6 +271,9 @@
                                         <integer key="value" value="15"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="buyClicked:" destination="dWk-CU-r2p" eventType="touchUpInside" id="QYp-YS-1fL"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rmO-Mw-BOt">
                                 <rect key="frame" x="186" y="700" width="42" height="21"/>
@@ -297,13 +300,16 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="lkR-No-y3m"/>
                     </view>
+                    <connections>
+                        <outlet property="pickerView" destination="DG2-F5-ccf" id="QbD-uc-tgE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CCn-tq-aYE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2197" y="867"/>
+            <point key="canvasLocation" x="2195.6521739130435" y="866.51785714285711"/>
         </scene>
         <!--Inventory Controller-->
         <scene sceneID="9iy-aj-cBN">
@@ -575,7 +581,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="XZf-o3-Cif"/>
                     </view>
                     <connections>
@@ -614,7 +620,6 @@
         <image name="xp" width="42" height="42.75"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="aFQ-iT-938"/>
         <segue reference="HW2-V2-YXW"/>
     </inferredMetricsTieBreakers>
 </document>

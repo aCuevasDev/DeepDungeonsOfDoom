@@ -47,6 +47,9 @@
 		FABE75ED21E464FB00F48BF9 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABE75EC21E464FB00F48BF9 /* CustomButton.swift */; };
 		FABE75F021E469DF00F48BF9 /* MainMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABE75EF21E469DF00F48BF9 /* MainMenuController.swift */; };
 		FABE75F221E4781400F48BF9 /* InventoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABE75F121E4781400F48BF9 /* InventoryController.swift */; };
+		FABE75F421EBB6A500F48BF9 /* ItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABE75F321EBB6A500F48BF9 /* ItemView.swift */; };
+		FABE75F621EBBC2800F48BF9 /* ShopController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABE75F521EBBC2800F48BF9 /* ShopController.swift */; };
+		FABE75F821EBCFBA00F48BF9 /* MonsterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABE75F721EBCFBA00F48BF9 /* MonsterView.swift */; };
 		FADBDEFE21AF3EB9005CD2B2 /* Deep Dungeons of Doom.png in Resources */ = {isa = PBXBuildFile; fileRef = FADBDEFC21AF3EB9005CD2B2 /* Deep Dungeons of Doom.png */; };
 		FADBDEFF21AF3EB9005CD2B2 /* Deep Dungeon of Doom.mdj in Resources */ = {isa = PBXBuildFile; fileRef = FADBDEFD21AF3EB9005CD2B2 /* Deep Dungeon of Doom.mdj */; };
 /* End PBXBuildFile section */
@@ -115,6 +118,9 @@
 		FABE75EC21E464FB00F48BF9 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		FABE75EF21E469DF00F48BF9 /* MainMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuController.swift; sourceTree = "<group>"; };
 		FABE75F121E4781400F48BF9 /* InventoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryController.swift; sourceTree = "<group>"; };
+		FABE75F321EBB6A500F48BF9 /* ItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemView.swift; sourceTree = "<group>"; };
+		FABE75F521EBBC2800F48BF9 /* ShopController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopController.swift; sourceTree = "<group>"; };
+		FABE75F721EBCFBA00F48BF9 /* MonsterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonsterView.swift; sourceTree = "<group>"; };
 		FADBDEFC21AF3EB9005CD2B2 /* Deep Dungeons of Doom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Deep Dungeons of Doom.png"; sourceTree = "<group>"; };
 		FADBDEFD21AF3EB9005CD2B2 /* Deep Dungeon of Doom.mdj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Deep Dungeon of Doom.mdj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -204,6 +210,8 @@
 			children = (
 				7F4BA05021B85308006ED86A /* SelectHeroView.swift */,
 				FABE75EC21E464FB00F48BF9 /* CustomButton.swift */,
+				FABE75F321EBB6A500F48BF9 /* ItemView.swift */,
+				FABE75F721EBCFBA00F48BF9 /* MonsterView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -285,6 +293,7 @@
 				FA06389521E43D3E00536839 /* SelectHeroController.swift */,
 				FABE75EF21E469DF00F48BF9 /* MainMenuController.swift */,
 				FABE75F121E4781400F48BF9 /* InventoryController.swift */,
+				FABE75F521EBBC2800F48BF9 /* ShopController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -449,6 +458,7 @@
 				FA029DF821A07C480012B62B /* Ranger.swift in Sources */,
 				FABE75F221E4781400F48BF9 /* InventoryController.swift in Sources */,
 				FA06389821E43DC200536839 /* Repo.swift in Sources */,
+				FABE75F621EBBC2800F48BF9 /* ShopController.swift in Sources */,
 				FA02D5C2219F71E100DA7419 /* Inventory.swift in Sources */,
 				FA02D5BE219F70D100DA7419 /* Consumable.swift in Sources */,
 				FA02D5BC219F70C700DA7419 /* Boots.swift in Sources */,
@@ -458,6 +468,8 @@
 				FA029DF421A07C320012B62B /* Warrior.swift in Sources */,
 				FA02D5AD219F703000DA7419 /* Item.swift in Sources */,
 				FA029E0221A08A110012B62B /* Staff.swift in Sources */,
+				FABE75F421EBB6A500F48BF9 /* ItemView.swift in Sources */,
+				FABE75F821EBCFBA00F48BF9 /* MonsterView.swift in Sources */,
 				FA06389621E43D3E00536839 /* SelectHeroController.swift in Sources */,
 				FA02D5BA219F70BD00DA7419 /* Cuirass.swift in Sources */,
 				FA02D5B4219F707F00DA7419 /* Armor.swift in Sources */,

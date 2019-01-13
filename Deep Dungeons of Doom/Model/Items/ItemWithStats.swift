@@ -48,20 +48,20 @@ class ItemWithStats : Item {
     }
     
     func round(){
-        atk = atk*100
-        def = def*100
-        mag = mag*100
-        lck = lck*100
+        atk = atk*10
+        def = def*10
+        mag = mag*10
+        lck = lck*10
         
         atk.round()
         def.round()
         mag.round()
         lck.round()
         
-        atk = atk/100
-        def = def/100
-        mag = mag/100
-        lck = lck/100
+        atk = atk/10
+        def = def/10
+        mag = mag/10
+        lck = lck/10
     }
     
     func getPower() -> [String:Double]{

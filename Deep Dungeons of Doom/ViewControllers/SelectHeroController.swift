@@ -22,7 +22,7 @@ class SelectHeroController : UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.gray
+        self.view.backgroundColor = UIColor.black
         
         initLogo()
         initViews()
