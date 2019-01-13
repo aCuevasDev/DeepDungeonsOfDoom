@@ -10,69 +10,34 @@ import UIKit
 
 class SelectHeroView : UIView{
     
- 
-
-    
     var currentY : Int = 0
     
-    override init(frame: CGRect) {
+    override init (frame: CGRect){
         super.init(frame: frame)
-        //setupViews()
     }
-    
+
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        //setupViews()
     }
     
     convenience init(frame:CGRect, hero : Hero) {
         self.init(frame: frame)
         getHeroView(hero: hero)
     }
-    /*
-    func setupViews(){
-        currentHero = warrior
-        self.addSubview(getHeroView(hero: warrior))
-        currentHero = mage
-        self.addSubview(getHeroView(hero: mage))
-        currentHero = ranger
-        self.addSubview(getHeroView(hero: ranger))
-    } */
-    /*
-    //Segue doesn't work
-    @objc func buttonAction(sender: CustomButton!) {
-        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-     
-        guard let selectController = storyboard.instantiateViewController(withIdentifier: "SelectHeroController") as? SelectHeroController else {
-            print("Couldn't find controller")
-            return
-        }
-     
-        selectController.push()
-        print(sender.hero.name)
-     
-    } */
     
     func getHeroView(hero : Hero) {
         let viewHeight : Int = 200
         let viewWidth : Int = 415
         let healthWidth = 50
         var healthCounter = 0
-        
-       // let view : UIView = UIView(frame: CGRect(x: 0, y: currentY, width: viewWidth, height: viewHeight))
-        
-        //let btn : CustomButton = CustomButton(frame: CGRect(x: 0, y: currentY, width: viewWidth, height: viewHeight))
-        //btn.hero = hero
+
         
         let backgroundView : UIImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: self.bounds.width, height: self.bounds.height))
         backgroundView.image = UIImage(named: "back_heroe")
         self.addSubview(backgroundView)
         currentY += viewHeight+20
-
-       // backgroundView.contentMode = .scaleAspectFit
         
         let heroView : UIImageView = UIImageView(image: hero.image)
-//        heroView.contentMode = .scaleAspectFit
         heroView.frame = CGRect(x: 10, y: 30, width: 130, height: 130)
         self.addSubview(heroView)
         

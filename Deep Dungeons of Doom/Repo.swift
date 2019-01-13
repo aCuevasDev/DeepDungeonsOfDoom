@@ -7,4 +7,9 @@
 //
 
 import Foundation
+import UIKit
 
+var logoImage : UIImage = UIImage(named: "logo")!
+
+
+var heroImages : [String:UIImage] = "warrior" : UIImage(
