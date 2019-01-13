@@ -61,9 +61,10 @@ class ShopController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
 
     }
     
-    func initItemHero(){
+    func showHeroEquippedItem(){
         let index = pickerView.selectedRow(inComponent: 0)
         let item = playingHero.inventory.returnEquipped(item: itemArray[index])
+        
         if (item != nil){
         let view = UIView(frame: CGRect(x: 20, y: 500, width: 400, height: 150))
             view.addSubview(ItemView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: view.bounds.height), item: item!))
