@@ -25,14 +25,14 @@ class Monster : Character{
     }
     
     init(lvl : Int, image : UIImage){
-    lvl = lvl*10
+    let newLvl : Double = Double(lvl)*10
     
     super.init()
-    self.power = Int.random(lvl .. <lvl+70)
-    self.gold = power*0.5 +100*(lvl*0.7)
+    self.power = Int.random(in: Int(newLvl)..<Int(newLvl)+70)
+    self.gold = Int(Double(power)*0.5)+Int(100*(newLvl*0.7))
     self.maxHealth = 100 + lvl + power
     self.health = maxHealth
-    self.exp = power*0.7 + lvl
+    self.exp = Int(Double(power)*0.7 + newLvl)
     self.image = image
     }
 }

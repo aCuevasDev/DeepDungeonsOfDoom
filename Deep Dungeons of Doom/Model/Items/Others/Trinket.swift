@@ -29,6 +29,24 @@ class Trinket : ItemWithStats{
         self.image = image
     }
     
+    init(ilvl : Int, image: UIImage){
+        super.init()
+        
+        atkRatio = Double.random(in: 0.2..<0.35)
+        defRatio = Double.random(in: 0.1..<0.2)
+        magRatio = Double.random(in: 0.3..<0.35)
+        lckRatio = Double.random(in: 0.2..<0.3)
+        
+        atk = Double(ilvl) * atkRatio
+        def = Double(ilvl) * defRatio
+        mag = Double(ilvl) * magRatio
+        lck = Double(ilvl) * lckRatio
+        
+        iLvl = ilvl
+        cost = ilvl+Int.random(in: 70..<ilvl+80)
+        self.image = image
+    }
+    
     
     
 }

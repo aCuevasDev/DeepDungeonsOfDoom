@@ -5,6 +5,8 @@ import UIKit
 class ShopController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     var itemArray : [Item] = []
     
+    @IBOutlet weak var lbGold: UILabel!
+    @IBOutlet weak var lbSuccess: UILabel!
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -24,8 +26,12 @@ class ShopController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
         return 150
     }
-
-
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        showHeroEquippedItem(row: row)
+        lbSuccess.text = ""
+    }
+    
     
     @IBOutlet weak var pickerView: UIPickerView!
     
@@ -33,7 +39,9 @@ class ShopController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        lbGold.text = String(playingHero.gold)
         initItems()
+        showHeroEquippedItem(row: pickerView.selectedRow(inComponent: 0))
         pickerView.delegate = self
         pickerView.dataSource = self
         
@@ -42,30 +50,55 @@ class ShopController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     }
     
     func initItems(){
-       for _ in 0...2{
-        let sword = Sword(ilvl: playingHero.lvl*30, image: swordImages[Int.random(in: 0..<swordImages.count)])
-        let bow = Bow(ilvl: playingHero.lvl*30, image: bowImages[Int.random(in: 0..<bowImages.count)])
-        let staff = Staff(ilvl: playingHero.lvl*30, image: scepterImages[Int.random(in: 0..<scepterImages.count)])
+        let itemLvl = playingHero.lvl*30
+        
+       for _ in 0...1{
+        let sword = Sword(ilvl: itemLvl, image: swordImages[Int.random(in: 0..<swordImages.count)])
+        let bow = Bow(ilvl: itemLvl, image: bowImages[Int.random(in: 0..<bowImages.count)])
+        let staff = Staff(ilvl: itemLvl, image: scepterImages[Int.random(in: 0..<scepterImages.count)])
+        let armor = Cuirass(ilvl: itemLvl, image: cuirassImages[Int.random(in: 0..<cuirassImages.count)])
+        let boots = Boots(ilvl: itemLvl, image: bootsImages[Int.random(in: 0..<bootsImages.count)])
+        let helmet = Helmet(ilvl: itemLvl, image: helmetImages[Int.random(in: 0..<helmetImages.count)], magic: Bool.random())
+        let trinket = Trinket(ilvl: itemLvl, image: trinketImages[Int.random(in: 0..<trinketImages.count)])
         
         itemArray.append(sword)
         itemArray.append(bow)
         itemArray.append(staff)
+        itemArray.append(armor)
+        itemArray.append(boots)
+        itemArray.append(helmet)
+        itemArray.append(trinket)
         }
         itemArray.shuffle()
 
     }
     
-    func showHeroEquippedItem(){
-        let index = pickerView.selectedRow(inComponent: 0)
+    func showHeroEquippedItem(row : Int){
+        // Known Bug: even tho it is called from didSelectRow it doesn't upload the view till you click again.
+        
+        let equippedView = self.view.viewWithTag(100)
+        equippedView?.removeFromSuperview()
+        
+        let index = row
         let item = playingHero.inventory.returnEquipped(item: itemArray[index])
         
         if (item != nil){
-        let view = UIView(frame: CGRect(x: 20, y: 500, width: 400, height: 150))
+        let view = UIView(frame: CGRect(x: 20, y: 700, width: 400, height: 150))
             view.addSubview(ItemView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: view.bounds.height), item: item!))
+            view.tag = 100
+        self.view.addSubview(view)
         }
     }
     
     
     @IBAction func buyClicked(_ sender: Any) {
+        let item = itemArray[pickerView.selectedRow(inComponent: 0)]
+        if (playingHero.gold >= item.cost){
+        playingHero.buyItem(item: item)
+            lbSuccess.text = "Item bought!"
+            lbGold.text = String(playingHero.gold)
+        }else {
+            lbSuccess.text = "Not enough money!"
+        }
     }
 }

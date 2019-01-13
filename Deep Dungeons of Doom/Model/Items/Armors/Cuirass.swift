@@ -29,4 +29,22 @@ class Cuirass : Armor{
         self.image = image
     }
     
+    init(ilvl : Int, image : UIImage){
+        super.init()
+        
+        atkRatio = 0
+        defRatio = Double.random(in: 0.5..<0.7)
+        magRatio = 0
+        lckRatio = Double.random(in: 0.1..<0.2)
+        
+        atk = Double(ilvl) * atkRatio
+        def = Double(ilvl) * defRatio
+        mag = Double(ilvl) * magRatio
+        lck = Double(ilvl) * lckRatio
+        
+        iLvl = ilvl
+        cost = ilvl+Int.random(in: 70..<ilvl+90)
+        self.image = image
+    }
+    
 }

@@ -42,60 +42,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Deep Dungeons of Doom/ViewControllers/ShopController.swift"
-            timestampString = "569103327.959659"
+            timestampString = "569109604.484728"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Deep Dungeons of Doom/Model/Items/Weapon/Sword.swift"
-            timestampString = "569103327.959836"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
-            landmarkName = "init(ilvl:image:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Deep Dungeons of Doom/Model/Items/Weapon/Bow.swift"
-            timestampString = "569103327.9599431"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
-            landmarkName = "init(ilvl:image:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Deep Dungeons of Doom/Model/Items/Weapon/Staff.swift"
-            timestampString = "569103327.9601229"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
-            landmarkName = "init(ilvl:image:)"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
+            landmarkName = "showHeroEquippedItem(row:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
