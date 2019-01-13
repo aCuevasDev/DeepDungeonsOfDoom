@@ -1,9 +1,3 @@
-//
-//  SelectHeroView.swift
-//  Deep Dungeons of Doom
-//
-//  Created by Alex Cuevas on 05/12/2018.
-//  Copyright 2018 Alex. All rights reserved.
 
 import Foundation
 import UIKit
