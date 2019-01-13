@@ -10,23 +10,26 @@ import UIKit
 
 class SelectHeroView : UIView{
     
-    let warrior : Warrior = Warrior()
-    let ranger : Ranger = Ranger()
-    let mage : Mage = Mage()
-    var currentHero : Hero = Hero()
+ 
+
     
     var currentY : Int = 0
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        setupViews()
+        //setupViews()
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        setupViews()
+        //setupViews()
     }
     
+    convenience init(frame:CGRect, hero : Hero) {
+        self.init(frame: frame)
+        getHeroView(hero: hero)
+    }
+    /*
     func setupViews(){
         currentHero = warrior
         self.addSubview(getHeroView(hero: warrior))
@@ -34,7 +37,8 @@ class SelectHeroView : UIView{
         self.addSubview(getHeroView(hero: mage))
         currentHero = ranger
         self.addSubview(getHeroView(hero: ranger))
-    }
+    } */
+    /*
     //Segue doesn't work
     @objc func buttonAction(sender: CustomButton!) {
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
@@ -47,24 +51,22 @@ class SelectHeroView : UIView{
         selectController.push()
         print(sender.hero.name)
         
-    }
+    } */
     
-    func getHeroView(hero : Hero) -> UIView{
+    func getHeroView(hero : Hero) {
         let viewHeight : Int = 200
         let viewWidth : Int = 415
         let healthWidth = 50
         var healthCounter = 0
         
-        let view : UIView = UIView(frame: CGRect(x: 0, y: currentY, width: viewWidth, height: viewHeight))
+       // let view : UIView = UIView(frame: CGRect(x: 0, y: currentY, width: viewWidth, height: viewHeight))
         
-        let btn : CustomButton = CustomButton(frame: CGRect(x: 0, y: currentY, width: viewWidth, height: viewHeight))
-        btn.hero = hero
-        btn.addTarget(self, action: #selector(buttonAction(sender:)), for: .touchUpInside)
-      //  view.addSubview(btn)
+        //let btn : CustomButton = CustomButton(frame: CGRect(x: 0, y: currentY, width: viewWidth, height: viewHeight))
+        //btn.hero = hero
         
-        let backgroundView : UIImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: view.bounds.height))
+        let backgroundView : UIImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: self.bounds.width, height: self.bounds.height))
         backgroundView.image = UIImage(named: "back_heroe")
-        view.addSubview(backgroundView)
+        self.addSubview(backgroundView)
         currentY += viewHeight+20
 
        // backgroundView.contentMode = .scaleAspectFit
@@ -72,7 +74,7 @@ class SelectHeroView : UIView{
         let heroView : UIImageView = UIImageView(image: hero.image)
 //        heroView.contentMode = .scaleAspectFit
         heroView.frame = CGRect(x: 10, y: 30, width: 130, height: 130)
-        view.addSubview(heroView)
+        self.addSubview(heroView)
         
         let nameLabel:UILabel = {
             let lbl:UILabel = UILabel(frame: CGRect(x: 140, y: 30, width: 60, height: 25))
@@ -81,7 +83,7 @@ class SelectHeroView : UIView{
             lbl.textColor = UIColor.white
             return lbl
         }()
-        view.addSubview(nameLabel)
+        self.addSubview(nameLabel)
         
 
         func healthIcon(healthCount : Int) -> UIImageView {
@@ -91,7 +93,7 @@ class SelectHeroView : UIView{
         }
         let numHearts : Int = hero.maxHealth / 100
         for _ in 1...numHearts{
-            view.addSubview(healthIcon(healthCount: healthCounter))
+            self.addSubview(healthIcon(healthCount: healthCounter))
             healthCounter += 1
         }
         
@@ -101,14 +103,14 @@ class SelectHeroView : UIView{
             lbl.textColor = UIColor.white
             return lbl
         }()
-        view.addSubview(atkLabel)
+        self.addSubview(atkLabel)
         
         let atkIcon:UIImageView = {
             let view:UIImageView = UIImageView(frame: CGRect(x: 180, y: 65, width: 50, height: 50))
             view.image = UIImage(named: "damage")
             return view
         }()
-        view.addSubview(atkIcon)
+        self.addSubview(atkIcon)
         
         let atkValue:UILabel = {
             let lbl:UILabel = UILabel(frame: CGRect(x: 230, y: 80, width: 40, height: 25))
@@ -116,7 +118,7 @@ class SelectHeroView : UIView{
             lbl.textColor = UIColor.white
             return lbl
         }()
-        view.addSubview(atkValue)
+        self.addSubview(atkValue)
         
         let defLabel:UILabel = {
             let lbl:UILabel = UILabel(frame: CGRect(x: 140, y: 140, width: 40, height: 25))
@@ -124,14 +126,14 @@ class SelectHeroView : UIView{
             lbl.textColor = UIColor.white
             return lbl
         }()
-        view.addSubview(defLabel)
+        self.addSubview(defLabel)
         
         let defIcon:UIImageView = {
             let view:UIImageView = UIImageView(frame: CGRect(x: 180, y: 120, width: 50, height: 50))
             view.image = UIImage(named: "defensa")
             return view
         }()
-        view.addSubview(defIcon)
+        self.addSubview(defIcon)
         
         let defValue:UILabel = {
             let lbl:UILabel = UILabel(frame: CGRect(x: 230, y: 140, width: 40, height: 25))
@@ -139,7 +141,7 @@ class SelectHeroView : UIView{
             lbl.textColor = UIColor.white
             return lbl
         }()
-        view.addSubview(defValue)
+        self.addSubview(defValue)
         
         let magLabel:UILabel = {
             let lbl:UILabel = UILabel(frame: CGRect(x: 270, y: 80, width: 40, height: 25))
@@ -147,14 +149,14 @@ class SelectHeroView : UIView{
             lbl.textColor = UIColor.white
             return lbl
         }()
-        view.addSubview(magLabel)
+        self.addSubview(magLabel)
         
         let magIcon:UIImageView = {
             let view:UIImageView = UIImageView(frame: CGRect(x: 310, y: 65, width: 50, height: 50))
             view.image = UIImage(named: "magic")
             return view
         }()
-        view.addSubview(magIcon)
+        self.addSubview(magIcon)
         
         let magValue:UILabel = {
             let lbl:UILabel = UILabel(frame: CGRect(x: 360, y: 80, width: 40, height: 25))
@@ -162,7 +164,7 @@ class SelectHeroView : UIView{
             lbl.textColor = UIColor.white
             return lbl
         }()
-        view.addSubview(magValue)
+        self.addSubview(magValue)
         
         let lckLabel:UILabel = {
             let lbl:UILabel = UILabel(frame: CGRect(x: 270, y: 140, width: 40, height: 25))
@@ -170,14 +172,14 @@ class SelectHeroView : UIView{
             lbl.textColor = UIColor.white
             return lbl
         }()
-        view.addSubview(lckLabel)
+        self.addSubview(lckLabel)
         
         let lckIcon:UIImageView = {
             let view:UIImageView = UIImageView(frame: CGRect(x: 310, y: 120, width: 50, height: 50))
             view.image = UIImage(named: "lucky")
             return view
         }()
-        view.addSubview(lckIcon)
+        self.addSubview(lckIcon)
         
         let lckValue:UILabel = {
             let lbl:UILabel = UILabel(frame: CGRect(x: 360, y: 140, width: 40, height: 25))
@@ -185,9 +187,7 @@ class SelectHeroView : UIView{
             lbl.textColor = UIColor.white
             return lbl
         }()
-        view.addSubview(lckValue)
-        
-        return view
+        self.addSubview(lckValue)
 
     }
     
