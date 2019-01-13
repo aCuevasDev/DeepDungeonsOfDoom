@@ -42,15 +42,15 @@ class SelectHeroView : UIView{
     //Segue doesn't work
     @objc func buttonAction(sender: CustomButton!) {
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-        
+     
         guard let selectController = storyboard.instantiateViewController(withIdentifier: "SelectHeroController") as? SelectHeroController else {
             print("Couldn't find controller")
             return
         }
-        
+     
         selectController.push()
         print(sender.hero.name)
-        
+     
     } */
     
     func getHeroView(hero : Hero) {
