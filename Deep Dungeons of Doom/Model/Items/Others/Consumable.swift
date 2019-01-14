@@ -7,12 +7,16 @@
 //
 
 import Foundation
+import UIKit
 
 class Consumable : Item{
     var effect : Effect = Effect()
     
-    init(effect : Effect){
-        self.effect = effect
+    init(type : String, bonus : Int, image : UIImage){
+        super.init()
+        self.effect = Effect(type: type, bonus: bonus)
+        self.cost = 50 + (playingHero.lvl*15)
+        self.image = image
     }
     
     func use(hero : Hero){

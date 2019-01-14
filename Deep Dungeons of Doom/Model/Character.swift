@@ -19,7 +19,4 @@ class Character{
     var gold : Int = 100
     var health : Int = 0
     
-    func attackEnemy(T : Character){
-        T.health -= power
-    }
 }

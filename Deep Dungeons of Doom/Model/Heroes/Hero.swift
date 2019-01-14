@@ -9,19 +9,6 @@
 import Foundation
 import UIKit
 
-enum MyError: Error {
-    case runtimeError(String)
-    case numberError(String)
-}
-/*
-extension Dictionary {
-    mutating func merge(dict: [Key: Double]){
-        for (k, v) in dict {
-            updateValue(dict[k]+self[k], forKey: k)
-        }
-    }
-}
-*/
 internal let initItemLevel : Int = 30
 
 class Hero : Character{
@@ -40,49 +27,12 @@ class Hero : Character{
     var lck : Double = 0
     
     var lvl : Int = 1
-    
-    /*
-    init() throws {
- 
-   
-    do {
-        try someFunction()
-    } catch MyError.runtimeError(let errorMessage) {
-        print(errorMessage)
-    }
-            
-    }
-    
-    func someFunction() throws {
-        throw MyError.runtimeError("some message")
-    } */
-    
-    func getPower(){
-      /*  var pwrDic : [String:Double] = ["":0.0]
-          pwrDic.merge(dict: inventory.weapon.getPower())
-       pwrDic.mapValues { (value) -> Double in
-            return (value ?? 0) + inventory.weapon.getPower()[key]
-        }
-         */
-        /*
-        let sumAmountByComany = offerings.reduce(into: [:]) { (result, offer)  in
-            result[offer.company] = (result[offer.company] ?? 0 ) + offer.amount
-        } */
- 
-     /*   pwrDic.map { (arg) -> [String:Double] in
-            let (key, value) = arg
-            return pwrDic[key] = pwrDic[key]  + inventory.weapon.getPower()[key] ?? 0
-            }
- */
-        
-        
-    }
+
     
     func useConsumable(){
         if(self.inventory.consumable != nil){
             self.inventory.consumable!.use(hero: self)
-        }else {
-            //TODO ALERT MESSAGE TO USER (NO CONSUMABLE)
+            self.inventory.consumable = nil
         }
     }
     

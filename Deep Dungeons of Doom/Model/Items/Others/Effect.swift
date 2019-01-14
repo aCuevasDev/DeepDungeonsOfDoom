@@ -13,10 +13,10 @@ class Effect {
         
     }
     
-    init(type : String){
+    init(type : String, bonus : Int){
         switch type {
         case tags.heal.rawValue:
-            bonus = 30
+            self.bonus = bonus
             self.type = tags.heal.rawValue
             break
         default: break

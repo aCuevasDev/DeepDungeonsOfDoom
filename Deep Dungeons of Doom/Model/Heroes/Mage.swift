@@ -14,7 +14,7 @@ private var initHelmet : Helmet = Helmet(cst: 0, ilvl: initItemLevel, image: UII
 private var initCuirass : Cuirass = Cuirass(cst: 0, ilvl: initItemLevel, image: UIImage(named: "armour3")!)
 private var initBoots : Boots = Boots(cst: 0, ilvl: initItemLevel, image: UIImage(named: "boots")!)
 private var initTrinket : Trinket = Trinket(cst: 0, ilvl: initItemLevel, image: UIImage(named: "necklace")!)
-private var initConsumable : Consumable = Consumable(effect: Effect(type: "heal"))
+private var initConsumable : Consumable = Consumable(type: "heal", bonus: 50, image: potionImages[0])
 
 class Mage : Hero{
  
@@ -24,6 +24,7 @@ class Mage : Hero{
         self.image = heroImages["mage"]!
         name = "Mage"
         inventory = Inventory(weapon: initWeapon, helmet: initHelmet, cuirass: initCuirass, boots: initBoots, trinket: initTrinket)
+        inventory.consumable = initConsumable
         maxHealth = 200
         health = maxHealth
         

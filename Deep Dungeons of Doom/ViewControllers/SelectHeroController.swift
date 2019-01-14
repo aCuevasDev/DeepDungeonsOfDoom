@@ -55,11 +55,12 @@ class SelectHeroController : UIViewController {
     }
     
     @objc func buttonAction(sender: CustomButton!) {
-        let destinationController = self.storyboard?.instantiateViewController(withIdentifier: "MainMenuController") as? MainMenuController
-        
-        present(destinationController!, animated: true, completion: nil)
         playingHero = sender.hero
         print("btn pulsado" + sender.hero.name)
+        
+        let destinationController = self.storyboard?.instantiateViewController(withIdentifier: "MainMenuController") as? MainMenuController
+        
+        present(destinationController!, animated: true, completion: nil)  
     }
     
     

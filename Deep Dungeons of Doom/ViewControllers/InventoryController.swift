@@ -35,7 +35,7 @@ class InventoryController : UIViewController {
         
         heroNameLbl.text = playingHero.name
         atkVal.text = String(playingHero.atk)
-        healthLbl.text = "\(playingHero.health) / \(String(describing: playingHero.maxHealth))"
+        healthLbl.text = "\(playingHero.health)"
         defVal.text = String(playingHero.def)
         lckVal.text = String(playingHero.lck)
         gldVal.text = String(playingHero.gold)

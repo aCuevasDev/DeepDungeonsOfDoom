@@ -19,17 +19,16 @@ class ItemView : UIView{
     
     func initView(item : Item){
         
-        if let itemWithStats = item as? ItemWithStats{
-            
-            let background : UIImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: self.bounds.width, height: self.bounds.height))
-            background.image = UIImage(named: "back_heroe")
-            self.addSubview(background)
+        let background : UIImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: self.bounds.width, height: self.bounds.height))
+        background.image = UIImage(named: "back_heroe")
+        self.addSubview(background)
         
-            let imageView : UIImageView = UIImageView(frame: CGRect(x: 20, y: 20, width: 100, height: 100))
-            imageView.image = itemWithStats.image
-            self.addSubview(imageView)
-            
-            
+        let imageView : UIImageView = UIImageView(frame: CGRect(x: 20, y: 20, width: 100, height: 100))
+        imageView.image = item.image
+        self.addSubview(imageView)
+        
+        if let itemWithStats = item as? ItemWithStats{
+     
             let atkImg = UIImageView(frame: CGRect(x: 125, y: 25, width: 50, height: 50))
             atkImg.image = UIImage(named: "damage")
             let atkVal = UILabel(frame: CGRect(x: 175, y: 20, width: 50, height: 50))
@@ -61,6 +60,14 @@ class ItemView : UIView{
             magVal.textColor = UIColor.white
             self.addSubview(magImg)
             self.addSubview(magVal)
+        }else if let consumable = item as? Consumable{
+            let healImg = UIImageView(frame: CGRect(x: 220, y: 75, width: 50, height: 50))
+            healImg.image = UIImage(named: "heart")
+            let healVal = UILabel(frame: CGRect(x: 275, y: 70, width: 50, height: 50))
+            healVal.text = String(consumable.effect.bonus)
+            healVal.textColor = UIColor.white
+            self.addSubview(healImg)
+            self.addSubview(healVal)
         }
         
         let costImg = UIImageView(frame: CGRect(x: 305, y: 50, width: 50, height: 50))
