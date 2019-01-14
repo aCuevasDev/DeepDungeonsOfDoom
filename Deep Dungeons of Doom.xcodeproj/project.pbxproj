@@ -17,6 +17,9 @@
 		7F6D97A721A87A9E00216E66 /* Notes in Resources */ = {isa = PBXBuildFile; fileRef = 7F6D97A621A87A9E00216E66 /* Notes */; };
 		7F98E67C21A5E09600C7448A /* Effect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F98E67B21A5E09600C7448A /* Effect.swift */; };
 		7FB3922821B1B210008BC726 /* Dice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB3922721B1B210008BC726 /* Dice.swift */; };
+		FA005CE821EBEF4F009909B9 /* ChooseMonsterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA005CE721EBEF4F009909B9 /* ChooseMonsterController.swift */; };
+		FA005CEA21EBF194009909B9 /* BattleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA005CE921EBF194009909B9 /* BattleController.swift */; };
+		FA005CEC21EBF729009909B9 /* DiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA005CEB21EBF729009909B9 /* DiceView.swift */; };
 		FA029DF221A067F70012B62B /* ItemWithStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA029DF121A067F70012B62B /* ItemWithStats.swift */; };
 		FA029DF421A07C320012B62B /* Warrior.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA029DF321A07C320012B62B /* Warrior.swift */; };
 		FA029DF621A07C3E0012B62B /* Mage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA029DF521A07C3E0012B62B /* Mage.swift */; };
@@ -82,6 +85,9 @@
 		7F6D97A621A87A9E00216E66 /* Notes */ = {isa = PBXFileReference; lastKnownFileType = text; path = Notes; sourceTree = "<group>"; };
 		7F98E67B21A5E09600C7448A /* Effect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Effect.swift; sourceTree = "<group>"; };
 		7FB3922721B1B210008BC726 /* Dice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dice.swift; sourceTree = "<group>"; };
+		FA005CE721EBEF4F009909B9 /* ChooseMonsterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseMonsterController.swift; sourceTree = "<group>"; };
+		FA005CE921EBF194009909B9 /* BattleController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleController.swift; sourceTree = "<group>"; };
+		FA005CEB21EBF729009909B9 /* DiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceView.swift; sourceTree = "<group>"; };
 		FA029DF121A067F70012B62B /* ItemWithStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemWithStats.swift; sourceTree = "<group>"; };
 		FA029DF321A07C320012B62B /* Warrior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Warrior.swift; sourceTree = "<group>"; };
 		FA029DF521A07C3E0012B62B /* Mage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mage.swift; sourceTree = "<group>"; };
@@ -212,6 +218,7 @@
 				FABE75EC21E464FB00F48BF9 /* CustomButton.swift */,
 				FABE75F321EBB6A500F48BF9 /* ItemView.swift */,
 				FABE75F721EBCFBA00F48BF9 /* MonsterView.swift */,
+				FA005CEB21EBF729009909B9 /* DiceView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -294,6 +301,8 @@
 				FABE75EF21E469DF00F48BF9 /* MainMenuController.swift */,
 				FABE75F121E4781400F48BF9 /* InventoryController.swift */,
 				FABE75F521EBBC2800F48BF9 /* ShopController.swift */,
+				FA005CE721EBEF4F009909B9 /* ChooseMonsterController.swift */,
+				FA005CE921EBF194009909B9 /* BattleController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -465,7 +474,9 @@
 				7FB3922821B1B210008BC726 /* Dice.swift in Sources */,
 				7F98E67C21A5E09600C7448A /* Effect.swift in Sources */,
 				7F4BA04B21B84424006ED86A /* Character.swift in Sources */,
+				FA005CEC21EBF729009909B9 /* DiceView.swift in Sources */,
 				FA029DF421A07C320012B62B /* Warrior.swift in Sources */,
+				FA005CE821EBEF4F009909B9 /* ChooseMonsterController.swift in Sources */,
 				FA02D5AD219F703000DA7419 /* Item.swift in Sources */,
 				FA029E0221A08A110012B62B /* Staff.swift in Sources */,
 				FABE75F421EBB6A500F48BF9 /* ItemView.swift in Sources */,
@@ -476,6 +487,7 @@
 				FA02D57F219F6FCC00DA7419 /* AppDelegate.swift in Sources */,
 				FA029DF221A067F70012B62B /* ItemWithStats.swift in Sources */,
 				FA02D5B8219F709B00DA7419 /* Helmet.swift in Sources */,
+				FA005CEA21EBF194009909B9 /* BattleController.swift in Sources */,
 				FA02D5C0219F70E400DA7419 /* OffHand.swift in Sources */,
 				FA02D5B0219F706500DA7419 /* Hero.swift in Sources */,
 				7F187F7421AF16880009873F /* Shop.swift in Sources */,

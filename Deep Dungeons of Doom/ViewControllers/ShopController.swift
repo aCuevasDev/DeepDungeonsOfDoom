@@ -93,12 +93,7 @@ class ShopController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     @IBAction func buyClicked(_ sender: Any) {
         let item = itemArray[pickerView.selectedRow(inComponent: 0)]
-        if (playingHero.gold >= item.cost){
-        playingHero.buyItem(item: item)
-            lbSuccess.text = "Item bought!"
-            lbGold.text = String(playingHero.gold)
-        }else {
-            lbSuccess.text = "Not enough money!"
-        }
+        lbSuccess.text = playingHero.buyItem(item: item)
+        lbGold.text = String(playingHero.gold)
     }
 }

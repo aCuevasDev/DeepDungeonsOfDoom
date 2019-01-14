@@ -86,7 +86,7 @@ class Hero : Character{
         }
     }
     
-    func buyItem(item : Item){
+    func buyItem(item : Item) -> String{
         if(gold > item.cost){
             gold -= item.cost
             
@@ -110,8 +110,8 @@ class Hero : Character{
                 if(self.inventory.weapon.hands == 1){
                     self.inventory.offHand = item as! OffHand
                 }else {
-                    //TODO ERROR MESSAGE, CAN'T HAVE A 2 HANDED WEAPON AND OFFHAND
                     gold += item.cost
+                    return "Can't equip an offhand item with 2handed weapon"  
                 }
                 break
             case is Consumable.Type:
@@ -121,11 +121,48 @@ class Hero : Character{
             default:
                 break
             }
+            return "Item bought!"
         }else {
-            //TODO ALERT MESSAGE TO USER (CANT BUY)
+            return "Not enough money"
         }
     }
     
+    func getStats(){
+        
+        atk = inventory.weapon.atk * atkRatio
+        def = (inventory.boots.def + inventory.cuirass.def + inventory.helmet.def + inventory.trinket.def)
+        lck = (inventory.boots.lck + inventory.cuirass.lck + inventory.helmet.lck + inventory.trinket.lck + inventory.weapon.lck)
+        mag = (inventory.helmet.mag + inventory.trinket.mag + inventory.weapon.mag)
+        
+        if (inventory.offHand != nil){
+            def += (inventory.offHand?.def)!
+            lck += (inventory.offHand?.lck)!
+            mag += (inventory.offHand?.def)!
+        }
+        def = def * defRatio
+        lck = lck * lckRatio
+        mag = mag * magRatio
+        
+        round()
+    }
+    
+    func round(){
+        
+        atk = atk*10
+        def = def*10
+        lck = lck*10
+        mag = mag*10
+        
+        atk.round()
+        def.round()
+        lck.round()
+        mag.round()
+        
+        atk = atk/10
+        def = def/10
+        lck = lck/10
+        mag = mag/10
+    }
 
  
 }

@@ -22,7 +22,8 @@ class Warrior : Hero {
         super.init()
         
         name = "Warrior"
-        inventory = Inventory(weapon: initWeapon, helmet: initHelmet, cuirass: initCuirass, boots: initBoots, trinket: initTrinket) //TODO insert initial items into inventory
+        inventory = Inventory(weapon: initWeapon, helmet: initHelmet, cuirass: initCuirass, boots: initBoots, trinket: initTrinket)
+        
         maxHealth = 400
         health = maxHealth
         self.image = heroImages["warrior"]!
@@ -32,10 +33,8 @@ class Warrior : Hero {
         magRatio = 0.2
         lckRatio = 0.3
         
-        reload()
-    }
-    
-    func reload(){
-        self.atk = self.inventory.weapon.atk * atkRatio
+        
+        
+       getStats()
     }
 }

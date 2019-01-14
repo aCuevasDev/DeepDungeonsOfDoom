@@ -3,7 +3,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+/*
     override func viewDidLoad() {
         super.viewDidLoad()
         let sword = Sword(cst: 100, ilvl: 30, image: UIImage(named: "sword4")!, hands: 1)
@@ -71,7 +71,7 @@ class ViewController: UIViewController {
         print(warrior.atk)
         //TODO MODIFY RATIOS?
     }
-
+*/
 
 }
 

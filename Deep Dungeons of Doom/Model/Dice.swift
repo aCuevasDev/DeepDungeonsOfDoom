@@ -7,11 +7,15 @@
 //
 
 import Foundation
+import UIKit
 
 class Dice {
     
+    var value : Int = 0
+    var image : UIImage = UIImage()
     
-    func roll(T : Character){
-        
+    init(value : Int, image : UIImage){
+        self.value = value
+        self.image = image
     }
 }

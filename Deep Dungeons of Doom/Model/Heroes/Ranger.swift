@@ -22,7 +22,7 @@ class Ranger : Hero{
         
         self.image = heroImages["ranger"]!
         name = "Ranger"
-        inventory = Inventory()
+         inventory = Inventory(weapon: initWeapon, helmet: initHelmet, cuirass: initCuirass, boots: initBoots, trinket: initTrinket)
         maxHealth = 300
         health = maxHealth
         
@@ -30,5 +30,7 @@ class Ranger : Hero{
         defRatio = 0.4
         magRatio = 0.3
         lckRatio = 0.6
+        
+        getStats()
     }
 }

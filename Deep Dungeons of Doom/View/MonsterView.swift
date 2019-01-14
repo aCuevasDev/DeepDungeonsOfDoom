@@ -36,9 +36,9 @@ class MonsterView : UIView {
         self.addSubview(atkImg)
         self.addSubview(atkVal)
         
-        let gldImg = UIImageView(frame: CGRect(x: 305, y: 50, width: 50, height: 50))
+        let gldImg = UIImageView(frame: CGRect(x: 205, y: 50, width: 50, height: 50))
         gldImg.image = UIImage(named: "money")
-        let gldVal = UILabel(frame: CGRect(x: 355, y: 50, width: 50, height: 50))
+        let gldVal = UILabel(frame: CGRect(x: 255, y: 50, width: 50, height: 50))
         gldVal.text = String(monster.gold)
         gldVal.textColor = UIColor.white
         self.addSubview(gldImg)
