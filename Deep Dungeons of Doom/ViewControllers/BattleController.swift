@@ -30,15 +30,23 @@ class BattleController : UIViewController, UIPickerViewDataSource, UIPickerViewD
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         if (pickerView.tag == 0){
             resultDiceMon = (fightMonster?.power)!/30
+            
             if (resultDiceMon > 3){
-            return 3
+                resultDiceMon = 3
             }
             else if (resultDiceMon < 1){
-            return 1
-            }else {return resultDiceMon}
+                resultDiceMon = 1
+            }
+            return resultDiceMon
         }else {
             let power = playingHero.atk + playingHero.def + playingHero.lck + playingHero.mag
             resultDiceHero = Int(power/30)
+            
+            if(resultDiceHero < 1){
+                resultDiceHero = 1
+            }else if ( resultDiceHero > 3){
+                resultDiceHero = 3
+            }
             return resultDiceHero
         }
     }
@@ -87,7 +95,7 @@ class BattleController : UIViewController, UIPickerViewDataSource, UIPickerViewD
         lbHpMon.text = String((fightMonster?.health)!)
         lbHpHero.text = String(playingHero.health)
         
-        lbAtkHero.text = String(playingHero.atk)
+        lbAtkHero.text = String(playingHero.atk+playingHero.mag)
         lbDefHero.text = String(playingHero.def)
         
         setHeart()

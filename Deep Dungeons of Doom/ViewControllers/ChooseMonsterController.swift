@@ -43,7 +43,7 @@ class ChooseMonsterController : UIViewController,UIPickerViewDelegate,UIPickerVi
     
     func initMon(){
         for _ in 0...5{
-        let monster = Monster(lvl: Int.random(in: 0..<5), image: monsterImages[Int.random(in: 0..<monsterImages.count)])
+        let monster = Monster(lvl: Int.random(in: 1..<6), image: monsterImages[Int.random(in: 0..<monsterImages.count)])
         monsterArray.append(monster)
         }
         monsterArray.shuffle()
