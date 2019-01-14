@@ -20,6 +20,7 @@ class BattleController : UIViewController, UIPickerViewDataSource, UIPickerViewD
     @IBOutlet weak var lbHpHero: UILabel!
     @IBOutlet weak var lbHitHero: UILabel!
     
+    @IBOutlet weak var heartImg: UIImageView!
     @IBOutlet weak var lbDefHero: UILabel!
     @IBOutlet weak var lbAtkHero: UILabel!
     
@@ -88,6 +89,15 @@ class BattleController : UIViewController, UIPickerViewDataSource, UIPickerViewD
         
         lbAtkHero.text = String(playingHero.atk)
         lbDefHero.text = String(playingHero.def)
+        
+        setHeart()
+    }
+    
+    func setHeart(){
+        let heroHeart : Double = Double(playingHero.health)/Double(playingHero.maxHealth)
+        if(heroHeart <= 0.5 ){
+            heartImg.image = UIImage(named: "heart_middle")
+        }
     }
     
     
@@ -142,6 +152,8 @@ class BattleController : UIViewController, UIPickerViewDataSource, UIPickerViewD
         fightMonster?.health -= Int(heroAtk)
         playingHero.health -= (Int(monAtk)-Int(playingHero.def))
         
+        setHeart()
+        
         lbHpHero.text = String(playingHero.health)
         lbHpMon.text = String((fightMonster?.health)!)
         
@@ -150,13 +162,21 @@ class BattleController : UIViewController, UIPickerViewDataSource, UIPickerViewD
     }
     @IBAction func fightBtn(_ sender: Any) {
         animateBattle()
+        
         if(playingHero.health <= 0){
             fightMonster = nil
             playingHero = Hero()
-            showAlert(title: "You lost.", message: "")
+            
             let destinationController = self.storyboard?.instantiateViewController(withIdentifier: "SelectHeroController") as? SelectHeroController
             
-            present(destinationController!, animated: true, completion: nil)
+            
+            let alert = UIAlertController(title: "You lost", message: "", preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "Accept", style: .default, handler: {action in
+                self.present((destinationController)!, animated: true, completion: nil)
+            }))
+            present(alert, animated: true, completion: nil)
+            
         }else if ((fightMonster?.health)! <= 0){
             playingHero.health = playingHero.maxHealth
             let goldWon = Int(Double((fightMonster?.gold)!) * Double(playingHero.lck*0.2))
@@ -165,15 +185,23 @@ class BattleController : UIViewController, UIPickerViewDataSource, UIPickerViewD
             playingHero.exp += expWon
             
             playingHero.lvl = Int(Double(playingHero.exp/100))+1
-            showAlert(title: "You won!", message: "You get \(goldWon) gold and \(expWon) experience!")
             
             let destinationController = self.storyboard?.instantiateViewController(withIdentifier: "MainMenuController") as? MainMenuController
             
-            present(destinationController!, animated: true, completion: nil)
+            let alert = UIAlertController(title: "You won!", message: "You get \(goldWon) gold and \(expWon) experience!", preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "Accept", style: .default, handler: {action in
+                self.present(destinationController!, animated: true, completion: nil)
+            }))
+            
+            present(alert, animated: true, completion: nil)
+            
         }
     }
+    
     @IBAction func useConsumable(_ sender: Any) {
         if (playingHero.inventory.consumable != nil){
+            showAlert(title: "Consumable used!", message: "Healed for \(playingHero.inventory.consumable?.effect.bonus)")
             playingHero.useConsumable()
             lbHpHero.text = String(playingHero.health)
         }else {
@@ -185,7 +213,9 @@ class BattleController : UIViewController, UIPickerViewDataSource, UIPickerViewD
         
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         
-        alert.addAction(UIAlertAction(title: "Accept", style: .default, handler: {action in}))
+        alert.addAction(UIAlertAction(title: "Accept", style: .default, handler: {action in
+            
+        }))
         
         present(alert, animated: true, completion: nil)
         }

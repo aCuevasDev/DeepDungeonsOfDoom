@@ -44,6 +44,7 @@ class Sword : Weapon{
         iLvl = ilvl
         cost = ilvl+Int.random(in: 70..<ilvl+100)
         self.image = image
+        self.hands = 1
         
         round()
     }

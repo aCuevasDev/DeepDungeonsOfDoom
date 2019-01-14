@@ -61,7 +61,8 @@ class ShopController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         let helmet = Helmet(ilvl: itemLvl, image: helmetImages[Int.random(in: 0..<helmetImages.count)], magic: Bool.random())
         let trinket = Trinket(ilvl: itemLvl, image: trinketImages[Int.random(in: 0..<trinketImages.count)])
         let consumable = Consumable(type: "heal", bonus: 50+(20*playingHero.lvl), image: potionImages[Int.random(in: 0..<potionImages.count)])
-        
+        let offHand = OffHand(ilvl: itemLvl, image: shieldImages[Int.random(in: 0..<shieldImages.count)])
+            
         itemArray.append(sword)
         itemArray.append(bow)
         itemArray.append(staff)
@@ -69,6 +70,7 @@ class ShopController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         itemArray.append(boots)
         itemArray.append(helmet)
         itemArray.append(trinket)
+        itemArray.append(offHand)
         itemArray.append(consumable)
         }
         itemArray.shuffle()
